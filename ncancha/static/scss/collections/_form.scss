@@ -1,0 +1,81 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-conainer--center {
+    @extend .form-container;
+    align-items: center;    
+}
+
+.fields {
+    &.two {
+        @include from(m) {
+            display: flex;
+            justify-content: space-between;
+        }
+        .field {
+            @include from(m) {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 49%;
+            }
+        }
+
+    }
+    &.three {
+        @include from(m) {
+            display: flex;
+            justify-content: space-between;
+        }
+        .field {
+            @include from(m) {
+                flex-basis: 32%;
+            }
+        }
+    }
+}
+
+.field {
+    &--button {
+        align-self: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1.5em 0 .5em;
+        width: 70%;
+        @include from(m) {
+            justify-content: space-between;        
+            width: 20%;
+        }
+        
+    }
+
+    &--autocomplete {
+        position: relative;
+    }
+
+    &--match {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.form--search {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.7em;
+    input {
+        margin: 0;
+        opacity: .75;
+    }
+     .btn--search {
+        margin: 0;
+    }
+}
+
+.form--search--card {
+    padding: 0 1.7em;
+    margin-top: 1.7em;
+    @extend .form--search;
+}

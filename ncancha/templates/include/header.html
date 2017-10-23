@@ -1,0 +1,30 @@
+{% load  staticfiles %}
+
+
+<header class="main-header">
+	<div class="ed-container">
+		<div class="ed-item s-100 header-container">
+			<a href="{% url 'cancha_app:index' %}">
+				<img class="main-logo" src="{% static 'img/logo_ds.png' %}" alt="logo">
+			</a>
+			<div class="toggle-menu" id="toggle-menu">
+	      <span class="bar" aria-hidden="true"></span>
+	      <span class="name-toggle">Menú</span>
+	    </div>
+			<nav class="main-nav" id="main-nav">
+				<ul class="main-menu">
+					<li class="main-menu__item">
+						<a class="main-menu__link" href="{% url 'home_app:nosotros' %}">acerca de</a>
+					</li>
+					<li class="main-menu__item">
+						<a class="main-menu__link" href="{% url 'home_app:home_contacto' %}">contacto</a>
+					</li>
+					<li class="main-menu__item--action">
+						<a class="btn btn--green main-menu--action__link" href="{% url 'home_app:home_register' %}">Registrar mi cancha</a>
+					</li>
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+</header> <!-- .main-header -->

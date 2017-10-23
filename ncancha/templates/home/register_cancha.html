@@ -1,0 +1,87 @@
+{% extends "home/base_home.html" %}
+
+{% block title %}Registrar mi campo deportivo{% endblock %}
+
+{% block content %}
+
+{% load  staticfiles %}
+
+  {% include 'include/header.html' %}
+
+    <main class="main">
+      <h1 class="titulo_form">SOLICITAR REGISTRO DE MI CANCHA</h1>
+        <div class="ed-item main-center">
+
+
+
+            <div class="ed-item s-100">
+                <form method="post" class="form-container"> {% csrf_token %}
+                    <div class="fields two">
+
+                        <div class="field">
+                            <label for="name">Nombre</label>
+                            {{form.name}}
+                        </div>
+                        <div class="field">
+                            <label for="procedencia">Distrito</label>
+                            {{form.distrito}}
+                        </div>
+
+                    </div>
+                    <div class="fields two">
+
+                        <div class="field">
+                          <label for="procedencia">Url google Maps</label>
+                          {{form.maps}}
+                        </div>
+                        <div class="field">
+                            <label for="name">Subir una Imagen</label>
+                            {{form.image}}
+                        </div>
+                    </div>
+                    <div class="fields two">
+
+                        <div class="field">
+                            <label for="name">Pagina Web ó Fanepage Facebook</label>
+                            {{form.web}}
+                        </div>
+                        <div class="field">
+                            <label for="procedencia">Es una cancha Techada?</label>
+                            {{form.techo}}
+                        </div>
+
+                    </div>
+                    <div class="fields two">
+
+                        <div class="field">
+                            <label for="name">Describa sus Precios</label>
+                            {{form.price}}
+                        </div>
+                        <div class="field">
+                            <label for="procedencia">Ingrese telefonos para reservacion</label>
+                            {{form.phone}}
+                        </div>
+
+                    </div>
+                    <div class="fields two">
+
+                        <div class="field">
+                            <label for="name">Referencia de Ubicacion</label>
+                            {{form.reference}}
+                        </div>
+
+                    </div>
+
+                    <div class="field--button">
+                        <button type="submit" class="btn btn--submit">Registrar</button>
+                        <a href="{% url 'cancha_app:index' %}" class="btn btn--cancel">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </main>
+
+{% endblock content %}

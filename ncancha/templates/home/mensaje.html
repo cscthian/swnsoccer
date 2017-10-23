@@ -1,0 +1,32 @@
+{% extends "cancha/base_cancha.html" %}
+
+{% block title %} Bien hecho {% endblock %}
+
+{% block content %}
+
+{% load  staticfiles %}
+
+  {% include 'include/header.html' %}
+
+  <main class="main">
+
+    <div class="ed-container">
+        <div class="ed-item main-center">
+            <h1 class="title_detail">Su petecion se ha Realizado con exito <i class="fa fa-smile-o" aria-hidden="true"></i></h1>
+        </div>
+    </div>
+
+    <div class="ed-container cards">
+      <div class="ed-item ed-container">
+        <div class="ed-item ed-container card teams">
+          <div class="ed-item s-100 team__img">
+            <p>
+              {{mensaje}} <i class="fa fa-smile-o" aria-hidden="true"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}

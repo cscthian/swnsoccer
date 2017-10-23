@@ -1,0 +1,83 @@
+%animate {
+
+}
+
+.btn {
+  $bg-color: map-get($colors-grey, white);
+  $color-text: map-get($colors-grey, grey1);
+  $height-btn: 2.5em;
+  background-color: $bg-color;
+  border: 1px solid $color-text;
+  cursor: pointer;
+  color:$color-text;
+  display: inline-block;
+  font-size: .9em;
+  line-height: $height-btn;
+  margin-bottom: 1em;
+  padding: 0 1em;
+  position: relative;
+
+  @each $name, $color in $colors-primary {
+    &.btn--#{$name} {
+      color: #fff;
+      background-color: $color;
+      border: 1px solid $color;
+      transition: transform .1s, background-color .3s, border-color .3s;
+
+      &:hover {
+        background-color: darken($color, 7);
+        border-color: darken($color, 7);
+      }
+      &:active {
+        transform : scale(.97);
+      }
+    }
+  } // fin del bucke each de colores primarios
+
+  @each $name, $color in $colors-social {
+    &.btn--#{$name} {
+      color: #fff;
+      background-color: $color;
+      border: 1px solid $color;
+
+      &:hover {
+        background-color: lighten($color, 6);
+        border-color: darken($color, 6);
+      }
+      &:active {
+        transform : scale(.97);
+      }
+    }
+  } // fin del bucke each de colores de redes social
+
+  &.btn--round {
+    border-radius: 50%;
+  }
+
+
+  &.btn--submit {
+    color: #fff;
+    $bg-color: map-get($colors-primary, green2);
+    background-color: $bg-color;
+    border: 1px solid lighten($bg-color, 3%); 
+    line-height: 2.3em;
+    transition: all .7s;    
+
+    &:hover {
+      background-color: lighten($bg-color, 7%);      
+    }
+  }
+
+  &.btn--cancel {
+    $border: 1px solid map-get($colors-grey, grey3);    
+    $border-hover: 1px solid map-get($colors-grey, grey2);    
+    border: $border;
+    line-height: 2.3em;
+    transition: all .7s;
+    
+    &:hover {
+      border: $border-hover;
+      text-decoration: none;
+    }
+  }
+}

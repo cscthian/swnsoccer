@@ -1,0 +1,91 @@
+{% extends "cancha/base_cancha.html" %}
+
+{% block title %} Entretenimineto y Pasion por el deporte{% endblock %}
+
+{% block content %}
+
+{% load  staticfiles %}
+
+  {% include 'include/header.html' %}
+
+  <main class="main">
+    <div class="card__nosotros">
+      <img src="{% static 'img/cd-stadio.jpg' %}" alt="Avatar">
+      <div class="container__nosotros">
+
+        <div class="container__nosotros_img">
+          <img src="{% static 'img/deporte1.jpg' %}" alt="deporte cusco" />
+          <p class="container__nosotros_subtitulo_texto">
+            <b class="container__nosotros_subtitulo">Depor Start: </b>
+            Es una plataforma digital, que intenta promover el deporte en nuestro país,
+            un grupo de jóvenes cusqueños forma la organización de Deportstart.
+            El objetivo de la organización es ayudar con herramientas digitales como esta página web
+            a todas las personas que llevan el espíritu deportista, ya sean profesionales o aficionados.
+          </p>
+        </div>
+      </div>
+
+      <div class="container__nosotros">
+
+        <div class="container__nosotros_img">
+          <img src="{% static 'img/deporte2.jpg' %}" alt="deporte cusco" />
+          <p class="container__nosotros_subtitulo_texto">
+            <b class="container__nosotros_subtitulo">¿Qué Ofrece DeportStart? </b>
+            Muy pronto podrás contar con una plataforma web completa,
+            que te permitirá crear y administrar competencias deportivas,
+            visitar la competencia que más te interesan,
+            conocer torneos por tu zona o distrito y estar siempre
+            enterado de lo que pasa con los equipos deportivos que te interesan.
+          </p>
+        </div>
+      </div>
+
+      <div class="container__nosotros">
+
+        <div class="container__nosotros_img">
+          <p class="container__nosotros_subtitulo_contacto">
+              <span><b>Claro:</b> 944147277</span>
+              <span><b>Movistar:</b> 956866823</span>
+              <span><b>email:</b> deportstart@gmail.com</span>
+              <a class="link_face" href="https://www.facebook.com/DeporStart/">Facebook</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="banner">
+    <div class="ed-container">
+
+        <div class="nosotros_panel">
+            <h2 class="title_detail">Entretenimineto y Pasion por el deporte</h2>
+            <p>
+              <span><b>¿Qué es DeportStart?</b></span>
+              Es una plataforma digital, que intenta promover el deporte en nuestro país, un grupo de jóvenes cusqueños forma la organización de Deportstart. El objetivo de la organización es ayudar con herramientas digitales como esta página web a todas las personas que llevan el espíritu deportista, ya sean profesionales o aficionados.
+            </p>
+            <p>
+              <span><b>¿Qué Ofrece DeportStart?</b></span>
+              Muy pronto podrás contar con una plataforma web completa,
+              que te permitirá crear y administrar competencias deportivas,
+              visitar la competencia que más te interesan,
+              conocer torneos por tu zona o distrito y estar siempre
+              enterado de lo que pasa con los equipos deportivos que te interesan.
+            </p>
+            <p>
+              <span><b>Claro:</b> 944147277</span>
+            </p>
+            <p>
+              <span><b>Movistar:</b> 956866823</span>
+            </p>
+            <p>
+              <span><b>email:</b> deportstart@gmail.com</span>
+            </p>
+            <p>
+              <a class="link_face" href="https://www.facebook.com/DeporStart/">Facebook</a>
+            </p>
+          </div>
+        </div>
+
+    </div>-->
+  </main>
+
+{% endblock %}

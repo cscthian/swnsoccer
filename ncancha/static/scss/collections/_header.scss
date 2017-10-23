@@ -1,0 +1,121 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: $zindex-header;
+  background-color: $bg-header;
+}
+
+.header-container {
+  height: $height-header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-logo {
+
+}
+
+.main-header--panel {
+  $bg-colorPanel: map-get($colors-primary,green2);
+  $bd-bottomPanel: 1px solid darken(map-get($colors-primary,green2), 3%);
+  $color_panel: map-get($colors-grey, white);
+  $bs_panel: 0 1px 2px map-get($colors-grey, grey2);
+  @extend .main-header;
+
+  background-color: $bg-colorPanel;
+  color: $color-panel;
+  border-bottom: $bd-bottomPanel;
+  box-shadow: $bs_panel;
+}
+
+.header-container--panel {
+  $transition: all .8s;
+  $height-input: $height-headerPanel/1.5;
+  $height-inputFromM: $height-headerPanelFromM/1.5;
+  $bg-colorInput: lighten(map-get($colors-primary,green2), 2%);
+  $color-input: lighten(map-get($colors-primary,green2), 60%);
+  $bg-colorInputFocus: #fff;
+  $color-inputFocus: map-get($colors-grey, grey2);
+
+  $pd-space: 1em;
+  
+  display: flex;
+  align-items: center;
+  height: $height-headerPanel;
+
+  @include from(m) {
+    height: $height-headerPanelFromM; 
+  }
+  
+
+  &__logo {
+    padding-right: .5em;
+    
+    @include from(m) {
+      flex-basis: 20%;
+    }
+  }
+
+  &__search {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__settings {
+    padding-left: .5em;
+  }
+
+  &__input {
+    margin-bottom: 0;
+    height: $height-input;
+    border-radius: 4px;
+    background-color: $bg-colorInput;
+    transition: $transition;
+
+    @include from(m) {
+      height: $height-inputFromM;
+      flex-basis: 30%;    
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-input;
+      opacity: .8;
+      font-weight: $light;
+      font-size: .9em;
+      transition: $transition;
+      
+    }
+
+    &:-ms-input-placeholder {
+      color: $color-input;
+      opacity: .8;
+      font-weight: $light;
+      font-size: .9em;
+      transition: $transition;
+    }
+    &:focus {
+      flex-basis: 100%;
+      background-color: $bg-colorInputFocus;
+      transition: $transition;
+      &::-webkit-input-placeholder {
+        color: $color-inputFocus;
+        transition: $transition;
+        
+      }
+
+      &:-ms-input-placeholder {
+        color: $color-inputFocus;
+        transition: $transition;        
+      }
+    }
+    
+  }
+
+  &__add {
+    margin-bottom: 0;
+    color: white;
+  }
+}

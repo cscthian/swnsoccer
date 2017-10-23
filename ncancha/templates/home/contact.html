@@ -1,0 +1,52 @@
+{% extends "home/base_home.html" %}
+
+{% block title %}Contacta con Nosotros{% endblock %}
+
+{% block content %}
+
+{% load  staticfiles %}
+
+  {% include 'include/header.html' %}
+
+    <main class="main">
+
+        <div class="ed-item main-center">
+            <div class="ed-item s-100">
+                <br>
+                <h1 class="title--panel">Envianos tu Mensaje o Sugerencia</h1>
+            </div>
+
+            <div class="ed-item s-100">
+                <form method="post" class="form-container"> {% csrf_token %}
+                    <div class="fields two">
+
+                        <div class="field">
+                            <label for="name">Asunto</label>
+                            {{form.asunto}}
+                        </div>
+                        <div class="field">
+                            <label for="procedencia">Correo Electronico</label>
+                            {{form.email}}
+                        </div>
+
+                    </div>
+                    <div class="fields two">
+
+                        <div class="field">
+                          <label for="procedencia">Mensaje</label>
+                          {{form.mensaje}}
+                        </div>
+                    </div>
+                    <div class="field--button">
+                        <button type="submit" class="btn btn--submit">Enviar</button>
+                        <a href="{% url 'cancha_app:index' %}" class="btn btn--cancel">Home</a>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </main>
+
+{% endblock content %}

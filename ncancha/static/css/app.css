@@ -1,0 +1,74 @@
+.title_detail {
+  color: #1B5E20;
+  font-size: 36px;
+  margin-top: .6em;
+}
+
+.titulo_form {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  text-align: center;
+  color: #1B5E20;
+  font-weight: 400;
+  font-size: 1.8em;
+}
+
+.nosotros {
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: justify;
+}
+
+.link_face {
+  color: #1B5E20;
+}
+
+.card__nosotros {
+    /* Add shadows to create the "card" effect */
+    align-items: center;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container__nosotros {
+    padding-top: 0.9em;
+    color: #33691E;
+    width: 100%;
+    padding: 2px 16px;
+}
+
+.container__nosotros_subtitulo {
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 0.3em;
+  color: #1B5E20;
+  vertical-align: middle;
+}
+
+.container__nosotros_subtitulo_texto {
+  color: #212121;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container__nosotros_img {
+  width: 80%;
+  display: table;
+  margin: 0 auto 2em;
+}
+
+.container__nosotros_img img {
+  width: 400px;
+}
+
+.container__nosotros_img p {
+  text-align: justify;
+  background: white;
+  display: table-cell;
+  vertical-align: middle;
+}

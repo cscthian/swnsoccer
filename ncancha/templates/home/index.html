@@ -1,0 +1,204 @@
+{% extends "home/base_home.html" %}
+
+{% block title %}Deporstart|deporte en cusco|futbol cusco|voley cusco|basquet cusco{% endblock %}
+
+{% block content %}
+
+{% load  staticfiles %}
+
+  {% include 'include/header.html' %}
+
+  <main class="main">
+
+    <div class="banner">
+      <img src="{% static 'img/banner.jpg' %}" alt="" class="banner__img">
+      <div class="banner__data">
+        <h1 class="banner__title">DeporStart tu portal de deportes Busca tu <strong>campo deportivo</strong></h1>
+        <form action="" class="form--search">
+          <input type="text" placeholder="Busca por distrito, zona o nombre del campo deportivo">
+          <button class="btn btn--green btn--search"><i class="fa fa-lg fa-search"></i></button>
+        </form>
+        <div class="btn-group">
+          <a href="#" class="btn btn--orange">Más de DeportStart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ed-container cards">
+      <div class="ed-item s-100">
+        <h2 class="cards__title">Campos deportivos más buscados</h2>
+      </div>
+
+      <div class="ed-item s-100 m-25 card-container">
+        <div class="card">
+          <div class="card__image">
+              <span class="card__category--voley">Voleyball</span>
+              <img src="http://placehold.it/320x180" alt="#" class="card__image__banner">
+              <img src="{% static 'img/user.png' %}" alt="#" class="card__image__author">
+          </div>
+          <div class="card__body">
+              <h3 class="card__subtitle">soy el torneo voleybal del surco</h3>
+              <div class="card__content">
+                  <ul class="card-list">
+                      <li class="card-list__item"><i class="fa fa-circle skyblue fa-fw"></i> En curso.</li>
+                      <li class="card-list__item"><i class="fa fa-money black fa-fw"></i> Premio 2500.</li>
+                      <li class="card-list__item"><i class="fa fa-map-marker black fa-fw"></i> Calle 29 de abril ica.</li>
+                  </ul>
+              </div>
+              <a href="#" class="card__link--in bg--green">Registarte</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ed-item s-100 m-25 card-container">
+        <div class="card">
+          <div class="card__image">
+              <span class="card__category--voley">Voleyball</span>
+              <img src="http://placehold.it/320x180" alt="#" class="card__image__banner">
+              <img src="{% static 'img/user.png' %}" alt="#" class="card__image__author">
+          </div>
+          <div class="card__body">
+              <h3 class="card__subtitle">soy el torneo voleybal del surco</h3>
+              <div class="card__content">
+                  <ul class="card-list">
+                      <li class="card-list__item"><i class="fa fa-circle skyblue fa-fw"></i> En curso.</li>
+                      <li class="card-list__item"><i class="fa fa-money black fa-fw"></i> Premio 2500.</li>
+                      <li class="card-list__item"><i class="fa fa-map-marker black fa-fw"></i> Calle 29 de abril ica.</li>
+                  </ul>
+              </div>
+              <a href="#" class="card__link--in bg--green">Registarte</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ed-item s-100 m-25 card-container">
+        <div class="card">
+          <div class="card__image">
+              <span class="card__category--voley">Voleyball</span>
+              <img src="http://placehold.it/320x180" alt="#" class="card__image__banner">
+              <img src="{% static 'img/user.png' %}" alt="#" class="card__image__author">
+          </div>
+          <div class="card__body">
+              <h3 class="card__subtitle">soy el torneo voleybal del surco</h3>
+              <div class="card__content">
+                  <ul class="card-list">
+                      <li class="card-list__item"><i class="fa fa-circle skyblue fa-fw"></i> En curso.</li>
+                      <li class="card-list__item"><i class="fa fa-money black fa-fw"></i> Premio 2500.</li>
+                      <li class="card-list__item"><i class="fa fa-map-marker black fa-fw"></i> Calle 29 de abril ica.</li>
+                  </ul>
+              </div>
+              <a href="#" class="card__link--in bg--green">Registarte</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ed-item s-100 m-25 card-container">
+        <div class="card">
+          <div class="card__image">
+              <span class="card__category--voley">Voleyball</span>
+              <img src="http://placehold.it/320x180" alt="#" class="card__image__banner">
+              <img src="{% static 'img/user.png' %}" alt="#" class="card__image__author">
+          </div>
+          <div class="card__body">
+              <h3 class="card__subtitle">soy el torneo voleybal del surco</h3>
+              <div class="card__content">
+                  <ul class="card-list">
+                      <li class="card-list__item"><i class="fa fa-circle skyblue fa-fw"></i> En curso.</li>
+                      <li class="card-list__item"><i class="fa fa-money black fa-fw"></i> Premio 2500.</li>
+                      <li class="card-list__item"><i class="fa fa-map-marker black fa-fw"></i> Calle 29 de abril ica.</li>
+                  </ul>
+              </div>
+              <a href="#" class="card__link--in bg--green">Registarte</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ed-item s-100 m-25 card-container">
+        <div class="card">
+          <div class="card__image">
+              <span class="card__category--futbol">Futbol</span>
+              <img src="http://placehold.it/320x180" alt="#" class="card__image__banner">
+              <img src="{% static 'img/user.png' %}" alt="#" class="card__image__author">
+          </div>
+          <div class="card__body">
+              <h3 class="card__subtitle">Soy el Torneo de los guadalajaras</h3>
+              <div class="card__content">
+                  <ul class="card-list">
+                      <li class="card-list__item"><i class="fa fa-circle green fa-fw"></i> Inscripciones abiertas.</li>
+                      <li class="card-list__item"><i class="fa fa-money black fa-fw"></i> Premio 2500.</li>
+                      <li class="card-list__item"><i class="fa fa-map-marker black fa-fw"></i> Calle 29 de abril ica.</li>
+                  </ul>
+              </div>
+              <a href="#" class="card__link--admin">Administrado</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ed-item s-100 m-25 card-container">
+        <div class="card">
+          <div class="card__image">
+              <span class="card__category--voley">Voleyball</span>
+              <img src="http://placehold.it/320x180" alt="#" class="card__image__banner">
+              <img src="{% static 'img/user.png' %}" alt="#" class="card__image__author">
+          </div>
+          <div class="card__body">
+              <h3 class="card__subtitle">soy el torneo voleybal del surco</h3>
+              <div class="card__content">
+                  <ul class="card-list">
+                      <li class="card-list__item"><i class="fa fa-circle skyblue fa-fw"></i> En curso.</li>
+                      <li class="card-list__item"><i class="fa fa-money black fa-fw"></i> Premio 2500.</li>
+                      <li class="card-list__item"><i class="fa fa-map-marker black fa-fw"></i> Calle 29 de abril ica.</li>
+                  </ul>
+              </div>
+              <a href="#" class="card__link--in bg--green">Registarte</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ed-item s-100 m-25 card-container">
+        <div class="card">
+          <div class="card__image">
+              <span class="card__category--voley">Voleyball</span>
+              <img src="http://placehold.it/320x180" alt="#" class="card__image__banner">
+              <img src="{% static 'img/user.png' %}" alt="#" class="card__image__author">
+          </div>
+          <div class="card__body">
+              <h3 class="card__subtitle">soy el torneo voleybal del surco</h3>
+              <div class="card__content">
+                  <ul class="card-list">
+                      <li class="card-list__item"><i class="fa fa-circle skyblue fa-fw"></i> En curso.</li>
+                      <li class="card-list__item"><i class="fa fa-money black fa-fw"></i> Premio 2500.</li>
+                      <li class="card-list__item"><i class="fa fa-map-marker black fa-fw"></i> Calle 29 de abril ica.</li>
+                  </ul>
+              </div>
+              <a href="#" class="card__link--in bg--green">Registarte</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ed-item s-100 m-25 card-container">
+        <div class="card">
+          <div class="card__image">
+              <span class="card__category--voley">Voleyball</span>
+              <img src="http://placehold.it/320x180" alt="#" class="card__image__banner">
+              <img src="{% static 'img/user.png' %}" alt="#" class="card__image__author">
+          </div>
+          <div class="card__body">
+              <h3 class="card__subtitle">soy el torneo voleybal del surco</h3>
+              <div class="card__content">
+                  <ul class="card-list">
+                      <li class="card-list__item"><i class="fa fa-circle skyblue fa-fw"></i> En curso.</li>
+                      <li class="card-list__item"><i class="fa fa-money black fa-fw"></i> Premio 2500.</li>
+                      <li class="card-list__item"><i class="fa fa-map-marker black fa-fw"></i> Calle 29 de abril ica.</li>
+                  </ul>
+              </div>
+              <a href="#" class="card__link--in">Registarte</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+{% endblock %}

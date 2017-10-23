@@ -1,0 +1,19 @@
+#requirmeent externs for databases
+
+#instalar este component para que funcnen mas compnentes
+sudo apt-get install postgresql-contrib
+
+#activate triagrmasimility:
+CREATE EXTENSION pg_trgm;
+
+
+#nuevo servidor
+#segundo cambio comi
+
+
+
+#ideas
+-las busquedas que sean la suma de resultados
+-agregar categorias como distritos o zonas
+-listar por tag de referencia
+-mensaje de adquiere software de registro de reservaciones gratis

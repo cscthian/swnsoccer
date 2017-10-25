@@ -61,6 +61,13 @@ target/
 #Ipython Notebook
 .ipynb_checkpoints
 
+#ruta de disenio
+design/bower_components/*
+design/css/*
+design/node_modules/*
+design/scss/font-awesome/*
+design/scss/_config.scss
+
 #Secrect json
 
 #ncancha/manage.py

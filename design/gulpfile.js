@@ -7,8 +7,10 @@ var sassPaths = [
   'bower_components/motion-ui/src'
 ];
 
-gulp.task('sass', function() {
-  return gulp.src('scss/app.scss')
+var browserSync = require('browser-sync').create();
+
+gulp.task('cancha', function() {
+  return gulp.src('./scss/**/*.scss')
     .pipe($.sass({
       includePaths: sassPaths,
       outputStyle: 'compressed' // if css compressed **file size**
@@ -17,9 +19,16 @@ gulp.task('sass', function() {
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('css'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['sass'], function() {
-  gulp.watch(['scss/**/*.scss'], ['sass']);
+gulp.task('default', function() {
+  browserSync.init({
+        server: "./"
+    });
+
+    gulp.watch(['./scss/**/*.scss'], ['cancha']);
+    gulp.watch("./templates/**/*.html").on('change', browserSync.reload);
+    gulp.watch("./js/*.js").on('change', browserSync.reload);
 });

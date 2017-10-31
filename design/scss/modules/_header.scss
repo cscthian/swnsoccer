@@ -1,0 +1,27 @@
+.mov-main-header{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: color(segundo);
+  &__logo{
+    font-size: $font-size-control;
+    color: color(blanco);
+  }
+  &__search{
+    font-size: $font-size-control;
+    color: color(blanco);
+  }
+}
+
+.mov-controls{
+  position: fixed;
+  border:solid;
+  top:90vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: color(septimo);
+  padding: 1em;
+}

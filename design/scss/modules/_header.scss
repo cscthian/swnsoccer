@@ -1,27 +1,47 @@
 .mov-main-header{
   position: fixed;
   width: 100%;
+  z-index: 200;
   display: flex;
   justify-content: space-between;
   padding: 1em;
-  background: color(segundo);
+  background: color(decimo);
   &__logo{
-    font-size: $font-size-control;
-    color: color(blanco);
+    font-family: $text-logo;
+    font-size: 1em;
+    font-weight: bold;
+    color: color(blanco); 
+    &__icon{
+      color: color(cuarto)
+    }   
   }
   &__search{
-    font-size: $font-size-control;
+    font-size: 1em;
     color: color(blanco);
   }
 }
 
 .mov-controls{
   position: fixed;
-  border:solid;
-  top:90vh;
+  top:90%;
   width: 100%;
+  height: 10%;
+  z-index: 200;
   display: flex;
   justify-content: space-around;
-  background: color(septimo);
   padding: 1em;
+  border-color: #eeeeee;
+  background: color(blanco);
+  &__control{
+
+    &__icon{
+      color: color(plomo);
+      font-size: 1.5em;
+    }
+  }
+
+}
+
+.space-header{
+  height: 3.5em;
 }

@@ -67,22 +67,21 @@ design/css/*
 design/node_modules/*
 design/scss/font-awesome/*
 design/scss/_config.scss
+design/gulpfile.js
 
 #Secrect json
 
 #ncancha/manage.py
 
-ncancha/secrets.json
+ncanchas/secrets.json
 
-#ncancha/ncancha/wsgi.py
+ncanchas/ncanchas/settings.py
 
-ncancha/media/*
+#ncanchas/ncancha/wsgi.py
 
-ncancha/applications/cancha/migrations/*
+ncanchas/media/*
 
-ncancha/applications/home/migrations/*
-
-ncancha/applications/miscelanea/migrations/*
+ncanchas/applications/home/migrations/*
 
 
 *migrations/*

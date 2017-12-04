@@ -1,6 +1,9 @@
 appdirs==1.4.3
 Django==1.11.6
+django-ckeditor==5.3.1
+django-js-asset==0.1.1
 django-model-utils==3.0.0
+djangorestframework==3.7.3
 olefile==0.44
 packaging==16.8
 Pillow==4.1.1
@@ -9,4 +12,5 @@ psycopg2==2.7.3.1
 pyparsing==2.2.0
 pytz==2017.2
 six==1.10.0
+sorl-thumbnail==12.4.1
 Unipath==1.1

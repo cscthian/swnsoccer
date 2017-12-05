@@ -1,0 +1,64 @@
+.buscador-filter{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 1em;	
+
+	&__prueba{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 70px;		
+
+		&__icon{
+			border-radius: 50%;
+			color: color(negro);
+			font-size: 1.5em;
+			&:hover{
+				color: color(noveno);
+			}
+		}
+		&__name{
+			font-family: arial;
+			text-align: center;
+			line-height: 1.3em;
+			text-decoration: overline;
+			//text-decoration: underline;
+			color: color(negro);
+			margin: 0px;
+			&:hover{
+				color: color(noveno);
+			}
+		}
+	}
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 70px;
+		&:hover{
+				color: color(noveno);
+			}
+		&__icon{
+			border-radius: 50%;
+			color: color(plomo);
+			font-size: 1.5em;
+			&:hover{
+				color: color(septimo);
+			}
+		}
+		&__name{
+			font-family: arial;
+			text-align: center;
+			line-height: 1.3em;
+			text-decoration: overline;
+			//text-decoration: underline;
+			color: color(plomo);
+			margin: 0px;
+			
+		}
+	}
+}

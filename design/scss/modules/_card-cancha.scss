@@ -20,12 +20,12 @@
 			border-radius: 10px;
 		}
 		&__caracteristica-ct{
-			font-family: $font-text;
+			font-family: arial;
 			font-size: 0.8em;
 			color: color(blanco);
 			position: absolute;
 			display: flex;
-			background: color(segundo);
+			background: color(decimo);
 			padding: 0.3em;
 			margin: 0.5em 0 0 0.5em;
 			border-radius: 10px;
@@ -33,7 +33,7 @@
 			justify-content: center;
 		}
 		&__caracteristica-st{
-			font-family: $font-text;
+			font-family: arial;
 			font-size: 0.8em;
 			color: color(blanco);
 			position: absolute;
@@ -63,9 +63,9 @@
 			justify-content: space-between;
 			padding-bottom: 1em;
 			&__btn{
-				background: color(segundo);
+				background: color(decimo);
 				color: color(blanco);
-				font-family: $font-text;
+				font-family: arial;
 				font-size: 0.8em;
 				margin-right: 1em;
 				border-radius: 20px;

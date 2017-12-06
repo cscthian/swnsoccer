@@ -4,6 +4,7 @@
   z-index: 200;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1em;
   background: color(decimo);
   @include desde(1000px){
@@ -13,7 +14,10 @@
     font-family: $text-logo;
     font-size: 1em;
     font-weight: bold;
-    color: color(blanco); 
+    color: color(blanco);
+    &:hover{
+        color: color(cuarto);
+      } 
     &__icon{
       color: color(cuarto)
     }   
@@ -29,7 +33,7 @@
 
 .mov-controls{
   position: fixed;
-  top:88%;
+  top:92%;
   width: 100%;
   height: 8%;
   z-index: 200;
@@ -57,17 +61,17 @@
     }
   }
   &__nuevas-canchas{
-    border: solid;   
-    font-size: 1.5em;
-    color: color(plomo);
+    text-align: center;   
+    font-size: 1em;
+    color: color(blanco);
+    background: color(plomo);
     font-weight: bold;
     border-radius: 50%;
-    padding: 0em 0.5em;
+    padding: 0 0.4em;
 
     &:hover{
-        background: color(blanco);
-        color: color(decimo);
-        border-radius: 50%;
+        background: color(decimo);
+        color: color(blanco);
     }
   }
 

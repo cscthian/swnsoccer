@@ -2,38 +2,36 @@
 	margin: 1em;
 	&__title{
 		font-family: $text3;
+		text-transform: uppercase;
+		font-size: 1em;
+		font-weight: bold;
 	}
 
 	&__items{
 		display: flex;
 		justify-content: space-around;
+		align-items: center;
 	}
 
 	&__item{
-		margin: 0.5em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		
 		&__name{
+			margin: 0;
+			margin-left: em;
 			font-family: $text3;
 			font-size: 0.8em;
 		}
 	}
 }
 
-.cancha-services__icon__primero {
-	color: color(primero);
+.cancha-services__icon {
+	color: color(plomo);
 }
 
-.cancha-services__icon__segundo {
-	color: color(segundo);
-}
-
-.cancha-services__icon__tercero {
-	color: color(tercero);
-}
-
-.cancha-services__icon__cuarto {
-	color: color(cuarto);
+.ser-active{
+	color: color(onceavo);
 }

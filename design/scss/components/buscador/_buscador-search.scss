@@ -9,7 +9,7 @@
 		height: 40px;
 		font-family: $font-title;
 		background: color(blanco);
-        border-style: dotted;
+		border: 1px solid color(decimo);
         border-right-style: none;
 		margin: 0px;
 		border-top-left-radius: 5px;
@@ -19,8 +19,11 @@
 		height: 40px;
 		background: color(fondo-card);
 		color:color(decimo);
+		border: 1px solid color(decimo);
+		border-left-style: none;
 		padding: 0em 1.5em 0em 1.5em;
 		font-size: 1em;
+		border-style-color: color(plomo);
 		border-top-right-radius: 5px;
         border-bottom-right-radius:5px;
 	}

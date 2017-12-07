@@ -14,6 +14,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
 THUMBNAIL_DEBUG = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR.child('static')]

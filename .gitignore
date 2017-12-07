@@ -82,6 +82,10 @@ ncanchas/ncanchas/settings.py
 ncanchas/media/*
 
 ncanchas/applications/home/migrations/*
+ncanchas/applications/cancha/migrations/*
+ncanchas/applications/reserva/migrations/*
+ncanchas/applications/users/migrations/*
+ncanchas/applications/zona/migrations/*
 
 
 *migrations/*

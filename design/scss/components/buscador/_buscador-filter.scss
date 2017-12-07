@@ -1,0 +1,59 @@
+.buscador-filter{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 1em;	
+	@include desde(1000px){
+	    justify-content: center;
+	};	
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 70px;
+		@include desde(1000px){			
+		    margin: 0 2em;
+		};		
+		&__namef1{
+			font-family: arial;
+			text-align: center;
+			//line-height: 1.2em;
+			color: color(blanco);
+			border-radius: 7px;
+			margin: 0px;
+			padding: 0 0.5em;
+			background: color(plomo);
+			&:hover{
+				background: color(azul);
+			}
+		}
+		&__namef2{
+			font-family: arial;
+			text-align: center;
+			//line-height: 1.2em;
+			color: color(blanco);
+			border-radius: 7px;
+			margin: 0px;
+			padding: 0 0.5em;
+			background: color(plomo);
+			&:hover{
+				background: color(decimo);
+			}
+		}
+		&__namef3{
+			font-family: arial;
+			text-align: center;
+			//line-height: 1.2em;
+			color: color(blanco);
+			border-radius: 7px;
+			margin: 0px;
+			padding: 0 0.5em;
+			background: color(plomo);
+			&:hover{
+				background: color(rojo);
+			}
+		}
+	}
+}

@@ -3,5 +3,14 @@
 	justify-content: center;
 	&__icon{
 		margin: 0.3em;
+		
 	}
+}
+
+.active{
+	color: color(azul);
+}
+
+.desactive{
+	color: color(plomo)
 }

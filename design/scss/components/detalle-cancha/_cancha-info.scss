@@ -1,21 +1,50 @@
 .cancha-info{
-	font-family: $text-logo;
-	background: color(sexto);
-	text-align: center;
-	color: color(blanco);
-	border:solid;
+	position: relative;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1em;
+	margin-top: 0.5em;
+	&__img{
+		width: 100%;
+		height: 100%;
+	}
 
-	&__name{
-		
-	}
-	&__direccion{
-		
-	}
-	&__telefono{
+	&__copy{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color:rgba(0,0,0,0.5);
+		color: color(blanco);
 
-	}
-	&__precio{
 
+		&__name{
+			font-size: 1.5em;
+			margin: 0;
+		}
+		&__cantidad{
+			color: color(blanco);
+			background: color(octavo);
+			margin: 0;
+			font-size: 1em;
+			border-radius: 10px;
+			padding: 0.1em 1em;
+			font-weight: bold;
+		}
+		&__direccion{
+			font-size: 1em;
+			margin: 0;
+		}
+		&__telefono{
+			font-size: 0.8em;
+			margin: 0;
+		}
 	}
+	
 	
 }

@@ -23,22 +23,24 @@ DJANGO_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #"django.contrib.gis"
     #'django.contrib.sitemaps',
 )
 
 LOCAL_APPS = (
-
+    'applications.users',
+    'applications.home',
+    'applications.zona',
+    'applications.cancha',
+    'applications.reserva',
 )
 
 THIRD_PARTY_APPS = (
-    'ckeditor',
     'sorl.thumbnail',
-    'ckeditor_uploader',
     'rest_framework',
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
-
 
 
 MIDDLEWARE = [
@@ -70,6 +72,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ncanchas.wsgi.application'
+
+AUTH_USER_MODEL = 'users.User'
 
 AUTH_PASSWORD_VALIDATORS = [
     {

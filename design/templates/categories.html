@@ -11,81 +11,120 @@
     <body>
       
       <header>
-        <div class="mov-main-header">
-          <a href="#" class="mov-main-header__logo">apelotear <i class="fa fa-futbol-o mov-main-header__logo__icon" aria-hidden="true"></i></a>
-
-          <a href="#" class="mov-main-header__search">
-            <i class="fa fa-search " aria-hidden="true"></i>
-          </a>
-
+        <!-- inicio del header para pc -->
+        <div class="main-header">
+          <div class="main-header__head">
+            <a href="#" class="main-header__head__logo">aPelotear <i class="fa fa-futbol-o main-header__head__logo__icon" aria-hidden="true"> </i></a>            
+            <form action="buscador_submit" method="get" accept-charset="utf-8">       
+              <div class="main-header__head__search">
+                <button type="submit" class="main-header__head__search__btn"> <i class="fa fa-search "aria-hidden="true"></i> </button>
+                <input type="text" class="main-header__head__search__input" placeholder="Busca tu cancha en aPelotear">          
+              </div>
+            </form>
+          </div>
+          <div class="controls">
+            <a href="#" class="controls__control">Inicio</a>
+            <a href="#" class="controls__control">Zona </a>
+            <a href="#" class="controls__control">Registrate!</a>  
+            <a href="#" class="controls__control">Museo</a>  
+          </div>                  
         </div>
-        <div class="mov-controls">
-          <a href="#" class="mov-controls__control"> <i class="fa fa-home mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__control"> <i class="fa fa-th-large mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mow-controls__control"> <i class="fa fa-plus mov-controls__control__icon" aria-hidden="true"></i> </a>
-        </div>
-        <div class="space-header">
+        <div class="space-header-pc">          
+        </div>        
           
+        <!-- fin del header para pc -->        
+        <div class="mov-controls">
+          <a href="#" class="mov-controls__control"> <i class="fa fa-futbol-o mov-controls__control__icon" aria-hidden="true"></i> </a>
+          <a href="#" class="mov-controls__control"> <i class="fa fa-th-large mov-controls__control__icon" aria-hidden="true"></i> </a>
+          <a href="#" class="mov-controls__control"> <i class="fa fa-pencil mov-controls__control__icon" aria-hidden="true"></i> </a>
+          <a href="#" class="mov-controls__control"> <i class="fa fa-user mov-controls__control__icon" aria-hidden="true"></i> </a>
+          <a href="#" class="mov-controls__nuevas-canchas"> 5 </a>
         </div>
+        
       </header>
 
-      <!-- inicio de categorias -->
-      <div class="grid-container">
-        <div class="categories">
-          <h1 class="categories__title">
-            canchas x zonas o distritos
-            canchas x zonas o distritos
+      <!-- inicio de categorias --> 
+      <div class="grid-container ">
+          <h1 class="categories-title">
+            Canchas por zonas o distritos
           </h1>
           <form action="buscador_submit" method="get" accept-charset="utf-8">      
-            <div class="buscador-search">
+            <div class="buscador-search categories-search">
               <input type="text" class="buscador-search__input" placeholder=" ingrese nombre, distrito o zona">
               <button type="submit" class="buscador-search__btn"> <i class="fa fa-search "aria-hidden="true"></i> </button>
             </div>
           </form>
+          <hr/>
+        
           <!-- inicio de resultados -->
-          <div class="grid-x grid-margin-x categories__results">
-            <div class="cell small-3 categories__results__item">
-              <a href="#" class="categories__results__item__a">
-                <img src="../img/1.jpg" alt="" class="categories__results__item__a__img">
-                <p class="categories__results__item__a__name">San Jeronimo</p>
+          <div class="grid-x grid-margin-x categories-results">
+            <div class="cell small-4 medium-3 large-3 categories-results__item">
+              <a href="#" class="categories-results__item__a">
+                <div class="canchas-zona">
+                  <img src="../img/1.jpg" alt="" class="categories-results__item__a__img">
+                  <span class="banner__copy__info__number count-canchas">10</span>
+                </div>
+                <p class="categories-results__item__a__name">San Jeronimo</p>
               </a>              
             </div>
-            <div class="cell small-3 categories__results__item">
-              <a href="#" class="categories__results__item__a">
-                <img src="../img/1.jpg" alt="" class="categories__results__item__a__img">
-                <p class="categories__results__item__a__name">San Sebastian</p>
+            <div class="cell small-4 medium-3 large-3 categories-results__item">
+              <a href="#" class="categories-results__item__a">
+                <div class="canchas-zona">
+                  <img src="../img/1.jpg" alt="" class="categories-results__item__a__img">
+                  <span class="banner__copy__info__number count-canchas">10</span>
+                </div>
+                <p class="categories-results__item__a__name">los madrigales serranos de urcos</p>
               </a>              
             </div>
-            <div class="cell small-3 categories__results__item">
-              <a href="#" class="categories__results__item__a">
-                <img src="../img/1.jpg" alt="" class="categories__results__item__a__img">
-                <p class="categories__results__item__a__name">Velasco Astete</p>
+            <div class="cell small-4 medium-3 large-3 categories-results__item">
+              <a href="#" class="categories-results__item__a">
+                <div class="canchas-zona">
+                  <img src="../img/1.jpg" alt="" class="categories-results__item__a__img">
+                  <span class="banner__copy__info__number count-canchas">10</span>
+                </div>
+                <p class="categories-results__item__a__name">San Jeronimo</p>
               </a>              
             </div>
-            <div class="cell small-3 categories__results__item">
-              <a href="#" class="categories__results__item__a">
-                <img src="../img/1.jpg" alt="" class="categories__results__item__a__img">
-                <p class="categories__results__item__a__name">saylla</p>
+            <div class="cell small-4 medium-3 large-3 categories-results__item">
+              <a href="#" class="categories-results__item__a">
+                <div class="canchas-zona">
+                  <img src="../img/1.jpg" alt="" class="categories-results__item__a__img">
+                  <span class="banner__copy__info__number count-canchas">10</span>
+                </div>
+                <p class="categories-results__item__a__name">San Jeronimo</p>
               </a>              
             </div>
-            <div class="cell small-3 categories__results__item">
-              <a href="#" class="categories__results__item__a">
-                <img src="../img/1.jpg" alt="" class="categories__results__item__a__img">
-                <p class="categories__results__item__a__name">Wanchaq</p>
-              </a>              
-            </div>
-            <div class="cell small-3 categories__results__item">
-              <a href="#" class="categories__results__item__a">
-                <img src="../img/1.jpg" alt="" class="categories__results__item__a__img">
-                <p class="categories__results__item__a__name">los nogales</p>
-              </a>              
-            </div>
+            
           </div>
           <!-- fin de resultados -->
-        </div>
-      </div>
+        </div>    
       <!-- fin de categorias -->
-  
+      
+      <!-- inicio de pie de pagina-->
+      <div class="footer-pc">
+        <div class="footer-pc__suscription">
+          <p class="footer-pc__suscription__title">¿Quieres saber las ultimas novedades? SUSCRÍBETE!!</p>
+          <div class="footer-pc__suscription__form">        
+            <input type="text" class="footer-pc__suscription__form__input" placeholder=" E-mail">
+            <button type="submit" class="footer-pc__suscription__form__btn">Suscribir</button>
+          </div>
+        </div>
+        <div class="footer-pc__contactenos">
+          <p class="footer-pc__contactenos__email"> e-Mail: apelotar.peru@gmail.com</p>
+          <p class="footer-pc__contactenos__telf"> Teléfonos: 9845362718-984536271</p>
+        </div>                
+        </div>
+        <div class="footer-pc__redes">
+          <a href="#" class="footer-pc__redes__rs"> <i class="fa fa-facebook-official footer-pc__redes__rs__icon" aria-hidden="true"></i></a>
+          <a href="#" class="footer-pc__redes__rs"> <i class="fa fa-google-plus-official footer-pc__redes__rs__icon" aria-hidden="true"></i></a>
+          <a href="#" class="footer-pc__redes__rs"> <i class="fa fa-pinterest footer-pc__redes__rs__icon" aria-hidden="true"></i></a>
+          <a href="#" class="footer-pc__redes__rs"> <i class="fa fa-youtube footer-pc__redes__rs__icon" aria-hidden="true"></i></a>
+          <a href="#" class="footer-pc__redes__rs"> <i class="fa fa-instagram footer-pc__redes__rs__icon" aria-hidden="true"></i></a>
+        </div> 
+      <!--fin de pie de pagina -->
+
+      <!-- espacio para el segmento de controles en movil -->
+      <div class="space-footer"></div>
     </body>
   
 

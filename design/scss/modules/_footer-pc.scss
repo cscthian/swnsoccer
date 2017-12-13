@@ -1,0 +1,93 @@
+.footer-pc{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	background: color(cafe);
+
+	&__suscription{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0.5em;
+		background: color(blanco);
+		border-radius: 10px;
+		margin-right: 0.5em;
+		margin-left: 0.5em;
+		&__title{
+			margin: 0;
+			font-family: $text-footer;
+			text-align: center;
+			color: color(negro);			
+		}
+		&__form{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0.5em;
+			&__input{
+				margin: 0;
+				height: 35px;
+				font-family: $text-footer;
+				border-right-style: none;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+
+			}
+			&__btn{
+				margin: 0;
+				height: 35px;
+				font-family: $text-footer;
+				border-left-style: none;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+				padding-left: 1em;
+				padding-right: 1em;
+				//margin-left: 0.1em;
+				background: color(cafe);
+				color: color(blanco);
+			}
+		}
+	}
+	&__contactenos{
+		margin-top: 1em;	
+		&__email{
+			margin: 0;
+			font-family: $text-footer;
+			color: color(blanco);
+		}
+		&__telf{
+			margin: 0;
+			font-family: $text-footer;
+			color: color(blanco);
+		}		
+	}
+	&__redes{
+		border-top: 1px solid #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.5em 2em;
+		background: color(bg2);
+		&__rs{
+			//padding: 0.5em 0.7em;
+			//border-radius: 50%;
+			//background: color(blanco);
+			
+			margin-left: 0.5em;
+			margin-right: 0.5em;
+			&__icon{
+				margin: 0;
+				font-size: 1.5em;
+				color: color(blanco);
+				&:hover{
+					color: color(cuarto);
+				}
+			}
+		}
+
+	}	
+}

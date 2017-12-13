@@ -1,5 +1,4 @@
 .cardcancha{
-	margin-bottom: 10%;
 }
 .card-cancha{
 	position: relative;
@@ -122,5 +121,22 @@
 	&__name{
 		font-size: 0.8em;
 		margin-left: 1em;
+	}
+}
+
+//estilos para detalle-cancha.html "canchas cercanas"
+.dc{
+	height: 250px;
+}
+.dc-card{
+	height: 150px;
+}
+
+.card-cancha__copy__nombre{
+	font-family: arial;
+	color: color(negro);
+	font-size: 1em;
+	&:hover{
+		color: color(octavo);
 	}
 }

@@ -16,9 +16,11 @@
 @import "modules/header";
 @import "modules/card-cancha";
 @import "modules/banner";
+@import "modules/footer-pc";
 //@import "templates/header";
 
 // components
+@import "components/base";
 @import "components/detalle-cancha/cancha-info";
 @import "components/detalle-cancha/cancha-map";
 @import "components/detalle-cancha/cancha-reservation";
@@ -29,6 +31,8 @@
 @import "components/detalle-cancha/cancha-filtro";
 @import "components/buscador/buscador-search";
 @import "components/buscador/buscador-filter";
+@import "components/categories/categories";
+@import "components/categories/categories-result";
 
 
 //

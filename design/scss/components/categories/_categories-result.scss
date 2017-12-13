@@ -1,0 +1,54 @@
+.categories-results{
+	padding: 1em;
+	&__item{
+		margin-bottom: 1em;
+		&__a{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			&__img{
+				height: 100px;
+				width: 100px;
+				border-radius: 50px;
+				@include desde(1000px){
+				    height: 200px;
+				    width: 200px;
+				    border-radius: 50%;
+				};
+
+			}
+			&__name{
+				margin: 0;
+				font-family: $text2;
+				font-size: 1em;
+				font-weight: 550;
+				line-height: 1em;
+				text-align: center;
+				color: color(negro);
+				margin-top: 0.5em;
+				@include desde(1000px){
+				    font-size: 1.5em;
+				};
+
+			}
+		}
+	}
+}
+.canchas-zona{	
+	position: relative;
+}
+.count-canchas{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	text-decoration: none;
+	font-weight: bold;
+	&:hover{
+		background: color(rojo);
+		color: color(blanco);
+	}
+	@include desde(1000px){
+		bottom: 20px;
+	};
+}

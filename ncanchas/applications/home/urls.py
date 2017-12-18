@@ -5,8 +5,8 @@ from . import views
 app_name="home_app"
 
 urlpatterns = [
-    #url para formulario de contacto
-    url(r'^$',
+	#url para pantalla de inicio    
+    url(r'^index/$',
         views.HomeView.as_view(),
         name='index'
     ),

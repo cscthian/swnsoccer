@@ -1,0 +1,52 @@
+ .museo__photos{
+ 	width: 100%;
+ 	&__title{
+ 		margin-left: 0.8em;
+ 		font-family: $text1;
+ 		&__icon{
+ 			color: color(decimo);
+ 		}
+ 	}
+ 	&__albums{
+ 		&__album{
+ 			//position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 0.5em;
+	 		&__img{
+				/* width: 200px;
+				height: 200px; */				
+	 		}
+	 		&__copy{
+	 			width: 100%;
+	 			//position: absolute;
+				display: flex;
+				//align-items: center;
+				justify-content: center;
+				&__icon{
+					color: color(onceavo);
+					background-color:rgba(0,0,0,0.7);
+					padding: 0.2em;
+					font-size: 2em;
+				}
+				&__name{
+					width: 100%;
+					font-family: $font-text;
+					color: color(negro-1);
+					font-size: 1.2em;
+					line-height: 1.2em;
+					margin-left: 0.2em;
+					//background-color:rgba(0,0,0,0.7);
+					background: color(blanco);	
+					&:hover{
+						color: color(negro-1);
+						font-size: 1.3em;
+					}		
+				}
+	 		}
+	 	}
+ 	}
+ 	
+ }

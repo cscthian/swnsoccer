@@ -21,6 +21,7 @@
 
 // components
 @import "components/base";
+@import "components/detalle-cancha/cancha-detalle";
 @import "components/detalle-cancha/cancha-info";
 @import "components/detalle-cancha/cancha-map";
 @import "components/detalle-cancha/cancha-reservation";
@@ -33,6 +34,11 @@
 @import "components/buscador/buscador-filter";
 @import "components/categories/categories";
 @import "components/categories/categories-result";
+@import "components/museo/museo-general";
+@import "components/museo/museo-information";
+@import "components/museo/museo-media-photos";
+@import "components/museo/museo-media-video";
+@import "components/museo/museo-album";
 
 
 //

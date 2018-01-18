@@ -10,5 +10,8 @@
 		font-family: $font-title;
 		font-size: 0.8em;
 		color: color(octavo);
+		@include desde(1000px){
+			font-size: 1em;
+		};
 	}
 }

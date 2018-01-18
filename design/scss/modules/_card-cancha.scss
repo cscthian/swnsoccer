@@ -3,9 +3,9 @@
 .card-cancha{
 	position: relative;
 	border: solid 1px;
-	border-color: #eeeeee;
+	border-color: color(verde-bg);
 	margin-bottom: 1em;
-	background: #f5f5f5;
+	background: color(border-card);
 	border-radius: 10px;
 	&__card{
 		position: relative;

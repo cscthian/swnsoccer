@@ -1,0 +1,14 @@
+.detalle-cancha{
+	@include desde(1000px){		
+		display: flex;
+     	margin-left: 10em;
+      	margin-right: 10em;
+	};
+	&__1{
+		display: flex;
+		flex-direction: column;
+		background: color(fondo-card);
+		border: 1px solid color(verde-bg);
+		margin-bottom: 0.5em;
+	}	
+}

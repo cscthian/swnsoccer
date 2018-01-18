@@ -1,0 +1,37 @@
+.museo__album{
+	width: 900px;
+	margin: 0.5em;
+	&__foto{
+		margin: 0.5em;
+		&__img{
+			width: 100%;
+		}
+		&__description{
+			//height: 100px;
+			display: flex;
+			&__space{
+			width: 80px;
+			background: color(quinto);
+			}
+			&__info{
+				margin: 0;
+				padding-left: 0.3em;
+				font-size: 1em;
+				line-height: 1.2em;
+				color: color(primero);
+				background: color(fondo-card);
+			}
+		}
+	}
+}
+
+.evento{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__title{
+		text-align: center;
+		font-size: 2em;
+		width: 1000px;		
+	}
+}

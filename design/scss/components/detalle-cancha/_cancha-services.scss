@@ -24,6 +24,9 @@
 			margin-left: em;
 			font-family: $text3;
 			font-size: 0.8em;
+			@include desde(1000px){
+				font-size: 1em;
+			};
 		}
 	}
 }

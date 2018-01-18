@@ -1,0 +1,48 @@
+.museo{ 
+	&__title{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+		&__l1{
+			margin: 0;
+			font-size: 7em;
+			color: color(decimo);
+			text-decoration: underline;
+		}
+		&__l2{
+			margin: 0;
+			font-size: 6em;
+			color: color(segundo);
+			text-decoration: underline;
+		}
+		&__l3{
+			margin: 0;
+			font-size: 5em;
+			color: color(quinto);
+			text-decoration: underline;
+		}
+		&__l4{
+			margin: 0;
+			font-size: 4em;
+			color: color(cuarto);
+			text-decoration: underline;
+		}
+		&__l5{
+			margin: 0;
+			font-size: 3em;
+			color: color(onceavo);
+			text-decoration: underline;
+		}
+		&__icon{
+			margin-left: 0.1em;
+			font-size: 7em;
+			color: color(primero);
+			text-decoration: underline;
+		}
+	}
+	&__media{
+		
+	}
+}
+

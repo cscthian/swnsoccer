@@ -1,11 +1,14 @@
 .cancha-filtro{
-	background: color(verde-bg);
+	background: color(fondo-card);
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	margin-left: 1em;
 	margin-right: 1em;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	@include desde(1000px){		
+		width: 600px;
+	};
 	&__title{
 		font-family: arial;
 		text-transform: uppercase;

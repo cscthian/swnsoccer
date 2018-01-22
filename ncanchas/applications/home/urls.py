@@ -10,4 +10,10 @@ urlpatterns = [
         views.HomeView.as_view(),
         name='index'
     ),
+
+    #url para renderizar plantillas
+    url(r'^plantillas/$',
+        views.PlantillaView.as_view(),
+        name='plantilla'
+    ),
 ]

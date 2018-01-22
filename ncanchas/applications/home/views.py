@@ -34,3 +34,8 @@ class HomeView(TemplateView):
     	return context
 
 
+class PlantillaView(TemplateView):
+    template_name = 'plantilla/museum.html'
+
+
+

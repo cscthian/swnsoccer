@@ -1,0 +1,121 @@
+{% extends "home/base_home.html" %}
+
+{% load staticfiles %}
+
+{% block title %} {{home.title}} {% endblock %}
+
+{% block description %} {{home.description}} {% endblock description %}
+
+{% block content %}
+  {% include "include/header.html" %}
+  
+  <div class="grid-container">
+        <div class=" grid-x grid-margin-x  grid-padding-x museo">        
+          <div class="cell small-8 museo__media">
+
+            <!-- titulo del museo -->
+            <div class="museo__title">
+              <p class="museo__title__l1">M</p>
+              <p class="museo__title__l2">U</p>
+              <p class="museo__title__l3">S</p>
+              <p class="museo__title__l4">E</p>
+              <p class="museo__title__l5">O</p>
+              <i class="fa fa-trophy museo__title__icon" aria-hidden="true"></i>
+            </div>
+            <!-- fin del titulo del museo -->
+
+            <!-- inicio de seccion  fotos -->                
+            <div class="museo__photos">
+              <h3 class="museo__photos__title"> Albúm de Fotos <i class="fa fa-camera museo__photos__title__icon" aria-hidden="true"></i></h3>
+              <div class="grid-container">
+                <div class="grid-x grid-margin-x museo__photos__albums">
+                  <!-- inicio de fotos evento -->
+                  <div class="cell small-6">
+                    <div class="museo__photos__albums__album">
+                      <img src="{% static 'img/1.jpg' %}" alt="" class="museo__photos__albums__album__img">
+                      <div class="museo__photos__albums__album__copy">
+                        <i class="fa fa-chevron-circle-right museo__photos__albums__album__copy__icon" aria-hidden="true"></i>
+                        <a class="museo__photos__albums__album__copy__name" href=""> Lorem ipsum dolor sit.</a>
+                      </div>              
+                    </div> 
+                  </div>
+                  <!-- fin de fotos evento -->
+                  <!-- inicio de fotos evento -->
+                  <div class="cell small-6">
+                    <div class="museo__photos__albums__album">
+                      <img src="../img/evento.jpg" alt="" class="museo__photos__albums__album__img">
+                      <div class="museo__photos__albums__album__copy">
+                        <i class="fa fa-chevron-circle-right museo__photos__albums__album__copy__icon" aria-hidden="true"></i>
+                        <a class="museo__photos__albums__album__copy__name" href=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                      </div>              
+                    </div> 
+                  </div>
+                  <!-- fin de fotos evento -->
+                  <!-- inicio de fotos evento -->
+                  <div class="cell small-6">
+                    <div class="museo__photos__albums__album">
+                      <img src="../img/evento.jpg" alt="" class="museo__photos__albums__album__img">
+                      <div class="museo__photos__albums__album__copy">
+                        <i class="fa fa-chevron-circle-right museo__photos__albums__album__copy__icon" aria-hidden="true"></i>
+                        <a class="museo__photos__albums__album__copy__name" href="">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. </a>
+                      </div>              
+                    </div> 
+                  </div>
+                  <!-- fin de fotos evento -->
+                  <!-- inicio de fotos evento -->
+                  <div class="cell small-6">
+                    <div class="museo__photos__albums__album">
+                      <img src="../img/evento.jpg" alt="" class="museo__photos__albums__album__img">
+                      <div class="museo__photos__albums__album__copy">
+                        <i class="fa fa-chevron-circle-right museo__photos__albums__album__copy__icon" aria-hidden="true"></i>
+                        <a class="museo__photos__albums__album__copy__name" href=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                      </div>              
+                    </div> 
+                  </div>
+                  <!-- fin de fotos evento -->
+                </div>
+              </div>         
+            </div>            
+            <!-- fin de seccion  fotos -->
+
+            <!-- inicio de seccion  video -->
+            <div class=" museo__video">
+              <h3 class="museo__video__title">Videos <i class="fa fa-film museo__video__title__icon" aria-hidden="true"></i></h3>
+              <iframe class="museo__video__yt" width="560" height="315" src="https://www.youtube.com/embed/xMweSkddkno" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <div class="museo__video__description">
+                <div class="museo__video__description__space"> </div>
+                <p class="museo__video__description__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. s</p>
+              </div>            
+            </div>
+            <!-- fin de seccion  video -->
+
+            <!-- inicio de seccion Acerca de Nosotros -->
+            <div class="nosotros">
+              <fieldset>
+                <legend> <i class="fa fa-group nosotros__icon" aria-hidden="true"></i>Somos</legend>                
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur debitis minima nulla delectus non, commodi inventore cumque quaerat, natus impedit in dolore. Doloremque accusantium cum reiciendis, ab ex iure labore temporibus numquam dignissimos laudantium dolore eligendi. Eos provident sequi corporis nulla nisi, numquam perspiciatis excepturi quia quas praesentium! Ipsa impedit, nostrum a. Ullam harum cupiditate, ad quo, non voluptatem voluptate assumenda nemo, eum illum beatae? Esse ad illum laudantium voluptatem animi dolorem officia, est error sit, similique, recusandae? Eligendi veniam, exercitationem labore, impedit est voluptatum alias expedita rerum harum quod sunt maxime porro excepturi, ex earum, nihil placeat temporibus numquam consequuntur. Voluptatibus iste corporis laudantium vel, magnam velit quas saepe molestias perspiciatis. Perspiciatis perferendis quidem aperiam ratione corporis sapiente alias atque necessitatibus, explicabo tenetur dolores. Unde, nulla, impedit. Tempora, non nam id deleniti laborum, sint, enim ut, inventore doloremque vero sed ratione quos minima impedit! Aperiam quod magnam natus illo!
+              </fieldset>
+            </div>
+            <!-- fin de seccion Acerca de Nosotros -->
+          </div>
+          
+          <!-- inicio de seccion  informacion de NOSOTROS, PROXIMOS EVENTOS -->
+          <div class="cell small-4 museo__information">
+            <p class="museo__information__title"> Visite nuestras Redes Sociales: </p>
+            <div class="fb-page museo__information__fb" data-href="https://www.facebook.com/apelotear/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" height="800px" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/apelotear/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/apelotear/">Apelotear</a></blockquote></div>
+          </div>
+          <!-- fin de seccion  informacion de NOSOTROS, PROXIMOS EVENTOS -->
+        </div>
+      </div>
+
+      <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+  {% include "include/footer.html" %}
+
+{% endblock content %}

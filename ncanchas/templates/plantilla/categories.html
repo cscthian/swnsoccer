@@ -1,0 +1,71 @@
+{% extends "home/base_home.html" %}
+
+{% load staticfiles %}
+
+{% block title %} {{home.title}} {% endblock %}
+
+{% block description %} {{home.description}} {% endblock description %}
+
+{% block content %}
+  {% include "include/header.html" %}
+
+  <!-- inicio de categorias --> 
+      <div class="grid-container ">
+          <h1 class="categories-title">
+            Canchas por zonas o distritos
+          </h1>
+          <form action="buscador_submit" method="get" accept-charset="utf-8">      
+            <div class="buscador-search categories-search">
+              <input type="text" class="buscador-search__input" placeholder=" ingrese nombre, distrito o zona">
+              <button type="submit" class="buscador-search__btn"> <i class="fa fa-search "aria-hidden="true"></i> </button>
+            </div>
+          </form>
+          <hr/>
+        
+          <!-- inicio de resultados -->
+          <div class="grid-x grid-margin-x categories-results">
+            <div class="cell small-4 medium-3 large-3 categories-results__item">
+              <a href="#" class="categories-results__item__a">
+                <div class="canchas-zona">
+                  <img src="{% static 'img/1.jpg' %}" alt="" class="categories-results__item__a__img">
+                  <span class="banner__copy__info__number count-canchas">10</span>
+                </div>
+                <p class="categories-results__item__a__name">San Jeronimo</p>
+              </a>              
+            </div>
+            <div class="cell small-4 medium-3 large-3 categories-results__item">
+              <a href="#" class="categories-results__item__a">
+                <div class="canchas-zona">
+                  <img src="../img/1.jpg" alt="" class="categories-results__item__a__img">
+                  <span class="banner__copy__info__number count-canchas">10</span>
+                </div>
+                <p class="categories-results__item__a__name">los madrigales serranos de urcos</p>
+              </a>              
+            </div>
+            <div class="cell small-4 medium-3 large-3 categories-results__item">
+              <a href="#" class="categories-results__item__a">
+                <div class="canchas-zona">
+                  <img src="../img/1.jpg" alt="" class="categories-results__item__a__img">
+                  <span class="banner__copy__info__number count-canchas">10</span>
+                </div>
+                <p class="categories-results__item__a__name">San Jeronimo</p>
+              </a>              
+            </div>
+            <div class="cell small-4 medium-3 large-3 categories-results__item">
+              <a href="#" class="categories-results__item__a">
+                <div class="canchas-zona">
+                  <img src="../img/1.jpg" alt="" class="categories-results__item__a__img">
+                  <span class="banner__copy__info__number count-canchas">10</span>
+                </div>
+                <p class="categories-results__item__a__name">San Jeronimo</p>
+              </a>              
+            </div>
+            
+          </div>
+          <!-- fin de resultados -->
+        </div>    
+      <!-- fin de categorias -->
+
+  {% include "include/footer.html" %}
+
+{% endblock content %}

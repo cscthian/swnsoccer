@@ -1,0 +1,196 @@
+{% extends "home/base_home.html" %}
+
+{% load staticfiles %}
+
+{% block title %} {{home.title}} {% endblock %}
+
+{% block description %} {{home.description}} {% endblock description %}
+
+{% block content %}
+  {% include "include/header.html" %}
+
+  <!-- inicio de detalle-cancha-->
+      <div class="detalle-cancha">
+        <div class="detalle-cancha__1">
+          <!-- inicio del baner principal -->
+          <div class="cancha-info">
+            <img src="../img/cancha1.jpg" alt="" class="cancha-info__img">
+            <div class="cancha-info__copy">
+              <h1 class="cancha-info__copy__name"> "La Canchita" </h1>
+              <div class="cancha-info__copy__cantidad">
+                <p class="cancha-info__copy__cantidad__1">5</p>
+                <p class="cancha-info__copy__cantidad__vs">vs</p>
+                <p class="cancha-info__copy__cantidad__2">5</p>            
+              </div>
+              <h2 class="cancha-info__copy__direccion"> Av. Manco Capac B-11 </h2>
+              <p class="cancha-info__copy__telefono"> Telf: 984534281 </p>          
+            </div>
+          </div>
+          <!-- fin del baner principal -->
+          <div class="cancha-puntuacion">
+
+            <i class="fa fa-futbol-o  cancha-puntuacion__icon active" aria-hidden="true"></i>
+
+            <i class="fa fa-futbol-o cancha-puntuacion__icon active" aria-hidden="true"></i>
+
+            <i class="fa fa-futbol-o cancha-puntuacion__icon active" aria-hidden="true"></i>
+
+            <i class="fa fa-futbol-o cancha-puntuacion__icon desactive" aria-hidden="true"></i>
+
+            <i class="fa fa-futbol-o cancha-puntuacion__icon desactive" aria-hidden="true"></i>
+
+          </div>  
+
+          <div class="cancha-services">
+
+            <p class="cancha-services__title"> Servicios: </p>
+            <div class="cancha-services__items">
+             
+              <div class="cancha-services__item">
+                <i class="fa fa-circle  cancha-services__icon" aria-hidden="true"></i>
+                <p class="cancha-services__item__name"> Techo</p>
+              </div>
+
+              <div class="cancha-services__item">
+                <i class="fa fa-circle  cancha-services__icon ser-active" aria-hidden="true"></i>
+                <p class="cancha-services__item__name"> Sudaderas</p>
+              </div>
+
+              <div class="cancha-services__item">
+                <i class="fa fa-circle  cancha-services__icon ser-active" aria-hidden="true"></i>
+                <p class="cancha-services__item__name"> Parking</p>
+              </div>
+
+              <div class="cancha-services__item">
+                <i class="fa fa-circle  cancha-services__icon" aria-hidden="true"></i>
+                <p class="cancha-services__item__name"> Cafetin</p>
+              </div>
+
+              <div class="cancha-services__item">
+                <i class="fa fa-circle cancha-services__icon ser-active" aria-hidden="true"></i>
+                <p class="cancha-services__item__name"> SS.HH</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="cancha-mapa">
+            <p class="cancha-mapa__title"> Mapa:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.0762249988175!2d-71.78848258925963!3d-13.592155076817981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7d3e430db82d%3A0xf7bdcbaf51ccbc18!2sParque+Arqueol%C3%B3gico+Tip%C3%B3n!5e0!3m2!1ses!2spe!4v1511213505239" class="cancha-mapa__map"></iframe>
+          </div>
+
+          <div class="cancha-description">
+            <p class="cancha-description__title"> Descripción: </p>
+            <p class="cancha-description__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eaque dolorem aliquid quidem similique possimus recusandae consequuntur ipsum doloremque corporis.</p>
+          </div>
+
+          <div class="cancha-reservation">
+            <p class="cancha-reservation__tabla"> aqui va una tabla de reservacion++</p>
+          </div>
+
+          <div class="cancha-comentaries">
+            <p class="cancha-comentaries__title"> <i class="fa fa-circle  cancha-comentaries__title__icon" aria-hidden="true"></i>  Comenta... </p>
+            <form action="." class="cancha-comentaries__form">
+              <textarea name="comentario" placeholder="Deja tu comentario..." class="cancha-comentaries__form__text" rows="1"></textarea>
+              <button type="sumbit" class="cancha-comentaries__form__btn"> <i class="fa fa-chevron-circle-right  cancha-comentaries__form__btn__icon" aria-hidden="true"></i>
+              </button>
+            </form>
+            <div class="cancha-comentaries__comentario">
+              <i class="fa fa-user-circle cancha-comentaries__comentario__icon1" aria-hidden="true"></i>
+              <div class="cancha-comentaries__comentario__person">
+                <p class="cancha-comentaries__comentario__person__correo"> flor@gmail.com</p>
+                <p class="cancha-comentaries__comentario__person__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <hr/>
+              </div> 
+              <p class="cancha-comentaries__comentario__date"> 5 min</p>
+              <i class="fa fa-times-circle cancha-comentaries__comentario__icon2" aria-hidden="true"></i>
+            </div>
+            <div class="cancha-comentaries__comentario">
+              <i class="fa fa-user-circle cancha-comentaries__comentario__icon1" aria-hidden="true"></i>
+              <div class="cancha-comentaries__comentario__person">
+                <p class="cancha-comentaries__comentario__person__correo"> by-max@gmail.com</p>
+                <p class="cancha-comentaries__comentario__person__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <hr/>
+              </div> 
+              <p class="cancha-comentaries__comentario__date"> 5 min</p>
+              <i class="fa fa-times-circle cancha-comentaries__comentario__icon2" aria-hidden="true"></i>
+            </div>
+            <div class="cancha-comentaries__comentario">
+              <i class="fa fa-user-circle cancha-comentaries__comentario__icon1" aria-hidden="true"></i>
+              <div class="cancha-comentaries__comentario__person">
+                <p class="cancha-comentaries__comentario__person__correo"> Thian@gmail.com</p>
+                <p class="cancha-comentaries__comentario__person__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <hr/>
+              </div> 
+              <p class="cancha-comentaries__comentario__date"> 5 min</p>
+              <i class="fa fa-times-circle cancha-comentaries__comentario__icon2" aria-hidden="true"></i>
+            </div>
+                     
+          </div>
+        </div>
+
+        <div class="cancha-filtro">
+          <p class="cancha-filtro__title"> Otras canchas cercanas: </p>
+
+          <!-- inicio de cards -->
+          <div class="grid-container">
+            <div class="grid-x grid-margin-x cardcancha">
+              <!-- inicio de card canchas -->
+              <div class="cell small-12  card-cancha dc">
+                <div class="card-cancha__card dc-card">
+                  <a href="#">
+
+                  <img src="/img/1.jpg" alt="" class="card-cancha__card__img"> </a>
+                  <p class="card-cancha__card__caracteristica-ct"> con techo </p>
+                </div>
+
+                <div class="card-cancha__copy "> 
+                  <a href="#" class="card-cancha__copy__nombre">Nombre de la cancha Nombre de la cancha cancha Nombre de la cancha cancha Nombre de la cancha</a>
+                  <h3 > </h3>                
+                </div>         
+              </div>
+              <!-- fin de card canchas -->
+              <!-- inicio de card canchas -->
+              <div class="cell small-12  card-cancha dc">
+                <div class="card-cancha__card dc-card">
+                  <a href="#">
+
+                  <img src="/img/1.jpg" alt="" class="card-cancha__card__img"> </a>
+                  <p class="card-cancha__card__caracteristica-ct"> con techo </p>
+                </div>
+
+                <div class="card-cancha__copy "> 
+                  <a href="#" class="card-cancha__copy__nombre">Nombre de la cancha Nombre de la cancha cancha Nombre de la cancha cancha Nombre de la cancha</a>
+                  <h3 > </h3>                
+                </div>         
+              </div>
+              <!-- fin de card canchas -->
+              <!-- inicio de card canchas -->
+              <div class="cell small-12  card-cancha dc">
+                <div class="card-cancha__card dc-card">
+                  <a href="#">
+
+                  <img src="/img/1.jpg" alt="" class="card-cancha__card__img"> </a>
+                  <p class="card-cancha__card__caracteristica-ct"> con techo </p>
+                </div>
+
+                <div class="card-cancha__copy "> 
+                  <a href="#" class="card-cancha__copy__nombre">Nombre de la cancha Nombre de la cancha cancha Nombre de la cancha cancha Nombre de la cancha</a>
+                  <h3 > </h3>                
+                </div>         
+              </div>
+              <!-- fin de card canchas -->
+                             
+
+            </div>
+          </div>
+          <!-- fin de cards-->
+        </div>
+
+      </div>
+      <!-- fin de detalle cancha -->   
+
+  {% include "include/footer.html" %}
+
+{% endblock content %}

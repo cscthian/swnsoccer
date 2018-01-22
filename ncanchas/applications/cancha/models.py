@@ -23,7 +23,7 @@ class Cancha(TimeStampedModel):
     price_dia = models.DecimalField('Precio de Dia', max_digits=5, decimal_places=2)
     price_noche = models.DecimalField('Precio de Noche', max_digits=5, decimal_places=2)
     description = models.TextField('Descripcion', blank=True)
-    mapa = models.URLField('URL google maps', blank=True)
+    mapa = models.TextField('url de google maps', blank=True)
     latitude = models.CharField('Latitud', blank=True, max_length=30)
     longitude = models.CharField('Longitud', blank=True, max_length=30)
     number_player = models.IntegerField('Jugadores or equipo', default=5)

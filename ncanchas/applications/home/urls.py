@@ -5,8 +5,8 @@ from . import views
 app_name="home_app"
 
 urlpatterns = [
-	#url para pantalla de inicio    
-    url(r'^index/$',
+	#url para pantalla de inicio
+    url(r'^$',
         views.HomeView.as_view(),
         name='index'
     ),

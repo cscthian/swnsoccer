@@ -6,7 +6,6 @@
 	padding-top: 1em;
 	padding-bottom: 0.5em;
 	background: color(cafe);
-
 	&__suscription{
 		display: flex;
 		flex-direction: column;
@@ -72,22 +71,70 @@
 		align-items: center;
 		padding: 0.5em 2em;
 		background: color(bg2);
-		&__rs{
-			//padding: 0.5em 0.7em;
-			//border-radius: 50%;
-			//background: color(blanco);
-			
-			margin-left: 0.5em;
-			margin-right: 0.5em;
+		&__rs1{
 			&__icon{
-				margin: 0;
+				padding: 0.2em;
+				border-radius: 25%;
+				margin: 0.2em;
 				font-size: 1.5em;
-				color: color(blanco);
+				color: color(azul);
+				background: color(blanco);
+				&:hover{
+					font-size: 1.7em;
+				}
+			}
+		}
+		&__rs2{
+			&__icon{
+				padding: 0.2em;
+				border-radius: 25%;
+				margin: 0.2em;
+				font-size: 1.5em;
+				color: color(rojo);
+				background: color(blanco);
+				&:hover{
+					font-size: 1.7em;
+				}
+			}
+		}
+		&__rs3{
+			&__icon{
+				padding: 0.2em;
+				border-radius: 25%;
+				margin: 0.2em;
+				font-size: 1.5em;
+				color: color(rojo);
+				background: color(blanco);
+				&:hover{
+					font-size: 1.7em;
+				}
+			}
+		}
+		&__rs4{
+			&__icon{
+				padding: 0.2em;
+				border-radius: 25%;
+				margin: 0.2em;
+				font-size: 1.5em;
+				color: color(rojo);
+				background: color(blanco);
+				&:hover{
+					font-size: 1.7em;
+				}
+			}
+		}
+		&__rs5{
+			&__icon{
+				padding: 0.2em;
+				border-radius: 25%;
+				margin: 0.2em;
+				font-size: 1.5em;
+				color:  color(blanco);    
+				background: color(rosado);
 				&:hover{
 					color: color(cuarto);
 				}
 			}
 		}
-
 	}	
 }

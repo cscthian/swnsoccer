@@ -12,6 +12,9 @@ from datetime import datetime, timedelta
 #from application Zone
 from applications.zona.models import Zone
 
+#managers for cancha
+from .managers import CanchaManager
+
 @python_2_unicode_compatible
 class Cancha(TimeStampedModel):
     """ modelo para campos deportivos"""
@@ -45,6 +48,7 @@ class Cancha(TimeStampedModel):
     )
     slug = models.SlugField(editable=False, max_length=200)
 
+    objects = CanchaManager()
 
     class Meta:
         verbose_name = 'Campo Deportivo'

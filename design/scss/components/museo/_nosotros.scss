@@ -1,0 +1,16 @@
+.nosotros{
+	padding: 0.5em 1em;
+	margin: 0.5em 0;
+	&__icon{
+		color: color(decimo);
+	}
+}
+fieldset{
+	border: 1px solid color(octavo);
+	text-align: justify;
+padding: 0.5em 1em;
+margin: 0.5em 0;  	
+}
+legend{
+	font-size: 2em;
+}

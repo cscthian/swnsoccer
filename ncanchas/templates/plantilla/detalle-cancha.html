@@ -1,75 +1,31 @@
-<!DOCTYPE html>
-<html>
-  	<head>
-	    <meta charset="utf-8">
-	    <meta http-equiv="x-ua-compatible" content="ie=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>detalle cancha</title>
-	    <link rel="stylesheet" href="/css/styles.css">
-  	</head>
+{% extends "home/base_home.html" %}
 
-  	<body>
-      
-      <header>
-        <!-- inicio header movil -->
-        <div class="mov-main-header">
-          <a href="#" class="mov-main-header__logo">aPelotear <i class="fa fa-futbol-o mov-main-header__logo__icon" aria-hidden="true"></i></a>
+{% load staticfiles %}
 
-          <a href="#" class="mov-main-header__search">
-            <i class="fa fa-search " aria-hidden="true"></i>
-          </a>
+{% block title %} {{home.title}} {% endblock %}
 
-        </div>
-        <div class="mov-controls">
-          <a href="#" class="mov-controls__control"> <i class="fa fa-futbol-o mov-controls__control__icon control-activate" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__control"> <i class="fa fa-th-large mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__control"> <i class="fa fa-pencil-square-o mov-controls__control__icon " aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__control"> <i class="fa fa-user mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__nuevas-canchas"> 5 </a>
-        </div>
-        <!-- fin de header-movil -->
+{% block description %} {{home.description}} {% endblock description %}
 
-        <!-- inicio de header-pc -->
-        <div class="main-header">
-          <div class="main-header__head">
-            <a href="#" class="main-header__head__logo">aPelotear <i class="fa fa-futbol-o main-header__head__logo__icon" aria-hidden="true"> </i></a>            
-            <form action="buscador_submit" method="get" accept-charset="utf-8">       
-              <div class="main-header__head__search">
-                <button type="submit" class="main-header__head__search__btn"> <i class="fa fa-search "aria-hidden="true"></i> </button>
-                <input type="text" class="main-header__head__search__input" placeholder=" Busca tu cancha en aPelotear">          
-              </div>
-            </form>
-          </div>
-          <div class="controls">
-            <a href="#" class="controls__control">Inicio</a>
-            <a href="#" class="controls__control">Zona </a>
-            <a href="#" class="controls__control">Registrate!</a>  
-            <a href="#" class="controls__control">Museo</a>  
-          </div>                   
-        </div> 
-        <!-- fin de header-pc -->
-        <div class="space-header">          
-        </div>
-        
+{% block content %}
+  {% include "include/header.html" %}
 
-      </header>
-      <!-- inicio de detalle-cancha-->
+  <!-- inicio de detalle-cancha-->
       <div class="detalle-cancha">
         <div class="detalle-cancha__1">
           <!-- inicio del baner principal -->
-      		<div class="cancha-info">
+          <div class="cancha-info">
             <img src="../img/cancha1.jpg" alt="" class="cancha-info__img">
             <div class="cancha-info__copy">
-        			<h1 class="cancha-info__copy__name"> "La Canchita" </h1>
+              <h1 class="cancha-info__copy__name"> "La Canchita" </h1>
               <div class="cancha-info__copy__cantidad">
                 <p class="cancha-info__copy__cantidad__1">5</p>
                 <p class="cancha-info__copy__cantidad__vs">vs</p>
                 <p class="cancha-info__copy__cantidad__2">5</p>            
               </div>
-        			<h2 class="cancha-info__copy__direccion"> Av. Manco Capac B-11 </h2>
-        			<p class="cancha-info__copy__telefono"> Telf: 984534281 </p>    			
+              <h2 class="cancha-info__copy__direccion"> Av. Manco Capac B-11 </h2>
+              <p class="cancha-info__copy__telefono"> Telf: 984534281 </p>          
             </div>
-      		</div>
+          </div>
           <!-- fin del baner principal -->
           <div class="cancha-puntuacion">
 
@@ -83,9 +39,9 @@
 
             <i class="fa fa-futbol-o cancha-puntuacion__icon desactive" aria-hidden="true"></i>
 
-          </div>	
+          </div>  
 
-      		<div class="cancha-services">
+          <div class="cancha-services">
 
             <p class="cancha-services__title"> Servicios: </p>
             <div class="cancha-services__items">
@@ -117,12 +73,12 @@
 
             </div>
 
-      		</div>
+          </div>
 
-      		<div class="cancha-mapa">
+          <div class="cancha-mapa">
             <p class="cancha-mapa__title"> Mapa:</p>
-      			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.0762249988175!2d-71.78848258925963!3d-13.592155076817981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7d3e430db82d%3A0xf7bdcbaf51ccbc18!2sParque+Arqueol%C3%B3gico+Tip%C3%B3n!5e0!3m2!1ses!2spe!4v1511213505239" class="cancha-mapa__map"></iframe>
-      		</div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.0762249988175!2d-71.78848258925963!3d-13.592155076817981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7d3e430db82d%3A0xf7bdcbaf51ccbc18!2sParque+Arqueol%C3%B3gico+Tip%C3%B3n!5e0!3m2!1ses!2spe!4v1511213505239" class="cancha-mapa__map"></iframe>
+          </div>
 
           <div class="cancha-description">
             <p class="cancha-description__title"> Descripción: </p>
@@ -233,33 +189,8 @@
         </div>
 
       </div>
-      <!-- fin de detalle cancha --> 
-      <!-- inicio de pie de pagina -->
-      <div class="footer-pc">
-          <div class="footer-pc__suscription">
-            <p class="footer-pc__suscription__title">¿Quieres saber las ultimas novedades? SUSCRÍBETE!!</p>
-            <div class="footer-pc__suscription__form">        
-              <input type="text" class="footer-pc__suscription__form__input" placeholder=" E-mail">
-              <button type="submit" class="footer-pc__suscription__form__btn">Suscribir</button>
-            </div>
-          </div>
-          <div class="footer-pc__contactenos">
-            <p class="footer-pc__contactenos__email"> e-Mail: apelotar.peru@gmail.com</p>
-            <p class="footer-pc__contactenos__telf"> Teléfonos: 9845362718-984536271</p>
-          </div>                
-        </div>
-        <div class="footer-pc__redes">
-          <a href="#" class="footer-pc__redes__rs1"> <i class="fa fa-facebook-official footer-pc__redes__rs1__icon" aria-hidden="true"></i></a>
-          <a href="#" class="footer-pc__redes__rs2"> <i class="fa fa-google-plus-official footer-pc__redes__rs2__icon" aria-hidden="true"></i></a>
-          <a href="#" class="footer-pc__redes__rs3"> <i class="fa fa-pinterest footer-pc__redes__rs3__icon" aria-hidden="true"></i></a>
-          <a href="#" class="footer-pc__redes__rs4"> <i class="fa fa-youtube footer-pc__redes__rs4__icon" aria-hidden="true"></i></a>
-          <a href="#" class="footer-pc__redes__rs5"> <i class="fa fa-instagram footer-pc__redes__rs5__icon" aria-hidden="true"></i></a>
-        </div> 
-      <!-- fin de pie de pagina -->
-      <!-- espacio para el segmento de controles en movil -->
-      <div class="space-footer"></div>   
+      <!-- fin de detalle cancha -->   
 
-  	</body>
-	   
+  {% include "include/footer.html" %}
 
-</html>
+{% endblock content %}

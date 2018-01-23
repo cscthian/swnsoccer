@@ -17,13 +17,14 @@ from applications.cancha.models import Cancha
 
 # import local app
 from .models import Home
+from .forms import KwordForm
 #
-
 
 class HomeView(TemplateView):
     template_name = 'home/index.html'
 
     def get_context_data(self, **kwargs):
+<<<<<<< HEAD
         context = super(HomeView, self).get_context_data(**kwargs)
         #contexto principal
         #recuperamos pagina principal de la bd
@@ -32,5 +33,17 @@ class HomeView(TemplateView):
         	state = True,
         )
         return context
+=======
+    	context = super(HomeView, self).get_context_data(**kwargs)
+    	#recuperamos pagina principal de la bd
+    	context['home'] = Home.objects.all()[0]
+    	context['form'] = KwordForm
+    	context['canchas'] = Cancha.objects.filter(
+    	   state = True
+    	)
+    	return context
+>>>>>>> d78fc7f6a96a679e8acad816d709fe44920919db
 
 
+class PlantillaView(TemplateView):
+    template_name = 'plantilla/detalle-cancha.html'

@@ -1,7 +1,11 @@
+
 .museo__album{
-	width: 900px;
-	margin: 0.5em;
+	//margin: 0.5em;
 	&__foto{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		margin: 0.5em;
 		&__img{
 			width: 100%;
@@ -9,16 +13,20 @@
 		&__description{
 			//height: 100px;
 			display: flex;
+			justify-content: center;
+			width: 100%;
 			&__space{
-			width: 80px;
+			width: 50px;
+			height: 60px;
 			background: color(quinto);
 			}
 			&__info{
+				width: 100%;
 				margin: 0;
 				padding-left: 0.3em;
 				font-size: 1em;
 				line-height: 1.2em;
-				color: color(primero);
+				color: color(negro-1);
 				background: color(fondo-card);
 			}
 		}
@@ -29,9 +37,19 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 0.5em 1.5em;
+	padding:0em  0.3em;
 	&__title{
 		text-align: center;
+		color: color(negro);
 		font-size: 2em;
-		width: 1000px;		
+		margin: 0;		
+	}
+	&__description{
+		font-family:  "inconsolata";
+		text-align: justify;
+		color: color(negro-1);
+		font-size: 1em;
+		margin: 0;
 	}
 }

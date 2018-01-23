@@ -1,76 +1,25 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Index</title>
-      <link rel="stylesheet" href="/css/styles.css">
-    </head>
+{% extends "home/base_home.html" %}
 
-    <body>
+{% load staticfiles %}
+
+{% block title %} {{home.title}} {% endblock %}
+
+{% block description %} {{home.description}} {% endblock description %}
+
+{% block content %}
+  {% include "include/header.html" %}
+
+  <!-- inicio de buscador -->
+      <div class="grid-container">
+        <form action="buscador_submit" method="get" accept-charset="utf-8">    
       
-      <header>
-       <!-- inicio del header para movil -->
-        <div class="mov-main-header">
-          <a href="#" class="mov-main-header__logo">aPelotear <i class="fa fa-futbol-o mov-main-header__logo__icon" aria-hidden="true"></i></a>
-
-          <a href="#" class="mov-main-header__search">
-            <i class="fa fa-search " aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="mov-controls">
-          <a href="#" class="mov-controls__control"> <i class="fa fa-futbol-o mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__control"> <i class="fa fa-th-large mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__control"> <i class="fa fa-pencil mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__control"> <i class="fa fa-user mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__nuevas-canchas"> 5 </a>
-        </div>
-        <div class="space-header">          
-        </div>
-        <!-- fin del header para movil -->
-
-        <!-- inicio del header para pc -->
-        <div class="main-header">
-          <div class="main-header__head">
-            <a href="#" class="main-header__head__logo">aPelotear <i class="fa fa-futbol-o main-header__head__logo__icon" aria-hidden="true"> </i></a>            
-            <form action="buscador_submit" method="get" accept-charset="utf-8">       
-              <div class="main-header__head__search">
-                <button type="submit" class="main-header__head__search__btn"> <i class="fa fa-search "aria-hidden="true"></i> </button>
-                <input type="text" class="main-header__head__search__input" placeholder="Busca tu cancha en aPelotear">          
-              </div>
-            </form>
+          <div class="buscador-search">
+            <input type="text" class="buscador-search__input" placeholder=" ingrese nombre, distrito o zona">
+            <button type="submit" class="buscador-search__btn"> <i class="fa fa-search "aria-hidden="true"></i> </button>
           </div>
-          <div class="controls">
-            <a href="#" class="controls__control">Inicio</a>
-            <a href="#" class="controls__control">Zona </a>
-            <a href="#" class="controls__control">Registrate!</a>  
-            <a href="#" class="controls__control">Museo</a>  
-          </div>                  
-        </div>        
-          
-        <!-- fin del header para pc -->
-      </header>
+        </form>
 
-      <!-- inicio de banner -->
-      <div class="banner">
-
-        <img src="/img/banner.jpg" alt="" class="banner__img">
-
-        <div class="banner__copy">
-          <h1 class="banner__copy__title"> Canchas de fútbol en cusco
-          </h1>
-          <form class="banner__copy__form">
-            <input type="text" class="banner__copy__form__text" name="Buscar"  placeholder=" Buscar por zona, distrito o nombre de cancha">
-            <button type="submit" class="banner__copy__form__btn"> <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </form>
-          <p class="banner__copy__info"> Esta semana tenemos <a href="#" class="banner__copy__info__number"> 3</a> nuevas canchas, qué esperas tú? </p>
-          <a href="#" class="banner__copy__action"> Registra tu cancha</a>
-        </div>
-      </div>
-      <!-- fin de banner -->
-      <!-- inicio de bloque filtros -->
+        <!-- inicio de bloque filtros -->
         <div class="buscador-filter">
           <a href="#" class="buscador-filter__item">            
             <p class="buscador-filter__item__namef1">Todos</p>
@@ -83,17 +32,15 @@
           </a>
           
         </div>
-      <!-- fin de bloque filtros -->
+        <!-- fin de bloque filtros -->
 
-      <!-- inicio de cards -->
-
-      <div class="grid-container">
+        <!-- inicio de bloque resultados -->
         <div class="grid-x grid-margin-x cardcancha">
           <!-- inicio de card canchas -->
           <div class="cell small-12 medium-6 large-4 card-cancha">
             <div class="card-cancha__card">
 
-              <img src="/img/1.jpg" alt="" class="card-cancha__card__img">
+              <img src="{% static 'img/1.jpg' %}" alt="" class="card-cancha__card__img">
               <p class="card-cancha__card__caracteristica-ct"> con techo </p>
             </div>
 
@@ -142,7 +89,7 @@
           <div class="cell small-12 medium-6 large-4 card-cancha">
             <div class="card-cancha__card">
 
-              <img src="/img/2.jpg" alt="" class="card-cancha__card__img">
+              <img src="{% static 'img/2.jpg' %}" alt="" class="card-cancha__card__img">
               <p class="card-cancha__card__caracteristica-st"> sin techo </p>
             </div>
 
@@ -336,35 +283,10 @@
           <!-- fin de card canchas -->         
 
         </div>
+        <!-- fin de bloque resultados -->
       </div>
-      <!-- fin de cards-->
-      <!-- inicio de pie de pagina-->
-      <div class="footer-pc">
-        <div class="footer-pc__suscription">
-          <p class="footer-pc__suscription__title">¿Quieres saber las ultimas novedades? SUSCRÍBETE!!</p>
-          <div class="footer-pc__suscription__form">        
-            <input type="text" class="footer-pc__suscription__form__input" placeholder=" E-mail">
-            <button type="submit" class="footer-pc__suscription__form__btn">Suscribir</button>
-          </div>
-        </div>
-        <div class="footer-pc__contactenos">
-          <p class="footer-pc__contactenos__email"> e-Mail: apelotar.peru@gmail.com</p>
-          <p class="footer-pc__contactenos__telf"> Teléfonos: 9845362718-984536271</p>
-        </div>                
-      </div>
-      <div class="footer-pc__redes">
-          <a href="#" class="footer-pc__redes__rs1"> <i class="fa fa-facebook-official footer-pc__redes__rs1__icon" aria-hidden="true"></i></a>
-          <a href="#" class="footer-pc__redes__rs2"> <i class="fa fa-google-plus-official footer-pc__redes__rs2__icon" aria-hidden="true"></i></a>
-          <a href="#" class="footer-pc__redes__rs3"> <i class="fa fa-pinterest footer-pc__redes__rs3__icon" aria-hidden="true"></i></a>
-          <a href="#" class="footer-pc__redes__rs4"> <i class="fa fa-youtube footer-pc__redes__rs4__icon" aria-hidden="true"></i></a>
-          <a href="#" class="footer-pc__redes__rs5"> <i class="fa fa-instagram footer-pc__redes__rs5__icon" aria-hidden="true"></i></a>
-        </div>
-      <!--fin de pie de pagina -->
+      <!-- fin de buscador -->
 
-      <!-- espacio para el segmento de controles en movil -->
-      <div class="space-footer"></div> 
-      
-    </body>
-  
+  {% include "include/footer.html" %}
 
-</html>
+{% endblock content %}

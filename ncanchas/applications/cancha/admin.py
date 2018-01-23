@@ -10,6 +10,8 @@ from .models import Cancha, Comentarys
 
 
 class CanchaAdmin(admin.ModelAdmin):
+
+    """admin model cancha"""
     list_display = (
         'name',
         'addresse',
@@ -20,10 +22,25 @@ class CanchaAdmin(admin.ModelAdmin):
         'parking',
     )
     #
-    search_fields = ('name', 'addresse',)
+    filter_horizontal = ('zone',)
+    search_fields = ('name',)
     list_filter = ('techo','parking','zone',)
+
+
+class ComentarysAdmin(admin.ModelAdmin):
+    """
+        model comentarys
+    """
+    list_display = (
+        'cancha',
+        'user',
+    )
+    #
+
+    search_fields = ('cancha', 'user',)
+    list_filter = ('cancha','user',)
 
 
 #admin rgiter
 admin.site.register(Cancha, CanchaAdmin)
-admin.site.register(Comentarys)
+admin.site.register(Comentarys, ComentarysAdmin)

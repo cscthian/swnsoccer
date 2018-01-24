@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Count
 from django.contrib.postgres.search import TrigramSimilarity
 
 class CanchaManager(models.Manager):
@@ -44,3 +45,16 @@ class CanchaManager(models.Manager):
             state = True,
             zone__in=zones,
         ).distinct()[:6]
+
+    def lista_distritos(self):
+        """ agrupa distritos de las zonas """
+
+        consulta = self.filter(
+            state = True,
+        ).values(
+            'zone__distrito__slug',
+            'zone__distrito__name'
+        ).annotate(
+            Count('name')
+        )
+        return consulta

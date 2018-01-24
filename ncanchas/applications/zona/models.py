@@ -9,6 +9,9 @@ from django.conf import settings
 from model_utils.models import TimeStampedModel
 from datetime import datetime, timedelta
 
+#
+from .managers import ZoneManager
+
 
 @python_2_unicode_compatible
 class Distrito(TimeStampedModel):
@@ -51,6 +54,8 @@ class Zone(TimeStampedModel):
     distrito = models.ForeignKey(Distrito, verbose_name='Distrito', on_delete=models.CASCADE,)
     name = models.CharField('Nombre', max_length=130)
     slug = models.SlugField(editable=False, max_length=200)
+
+    objects = ZoneManager()
 
     class Meta:
         verbose_name = 'Zona'

@@ -9,4 +9,6 @@ urlpatterns = [
     url(r'^', include('applications.home.urls')),
     #urls para cancha
     url(r'^', include('applications.cancha.urls')),
+    #urls para zona
+    url(r'^', include('applications.zona.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -35,4 +35,4 @@ class HomeView(TemplateView):
 
 
 class PlantillaView(TemplateView):
-    template_name = 'plantilla/detalle-cancha.html'
+    template_name = 'plantilla/categories.html'

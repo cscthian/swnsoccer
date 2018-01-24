@@ -1,5 +1,4 @@
 from django.db import models
-<<<<<<< HEAD
 
 class CanchaManagers(models.Manager):
     """Procedimientos para modelo Cancha"""
@@ -37,6 +36,8 @@ class CanchaManagers(models.Manager):
                     anulate=False
                 ).order_by('name')[:20]
 
+
+
     def search_structure_for_cancha_distrito(self, num, distrito):
         #buscar por structurure
             if num=='0':
@@ -71,7 +72,7 @@ class CanchaManagers(models.Manager):
                 ).order_by('name')[:20]
 
 
-=======
+
 from django.contrib.postgres.search import TrigramSimilarity
 
 class CanchaManager(models.Manager):
@@ -117,4 +118,4 @@ class CanchaManager(models.Manager):
             state = True,
             zone__in=zones,
         ).distinct()[:6]
->>>>>>> d78fc7f6a96a679e8acad816d709fe44920919db
+

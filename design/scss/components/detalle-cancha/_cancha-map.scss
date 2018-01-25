@@ -1,15 +1,16 @@
 .cancha-mapa{
-	padding: 0.1em;
 	margin: 1em;
+	padding: 5px;
 	&__title{
 		font-family: $text3;
 		text-transform: uppercase;
 		font-size: 1em;
 		font-weight: bold;
 	}
-	&__map{
-		border: none;
-		width: 100%;
-		height: 250px;
-	}
+}
+
+#cancha-mapa__map {
+	border: none;
+	width: 100%;
+	height: 330px;
 }

@@ -44,7 +44,7 @@ class CanchaManager(models.Manager):
         return self.filter(
             state = True,
             zone__in=zones,
-        ).distinct()[:6]
+        ).order_by('-vists').distinct()[:5]
 
     def agrupar_distrito_cancha(self, distrito):
         """ devuelve un distrito con total de canchas y con cancha mas visitada"""

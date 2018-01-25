@@ -66,12 +66,12 @@ class CanchaDetailView(FormView):
         context = super(CanchaDetailView, self).get_context_data(**kwargs)
         #recuperamos la cancha
         cancha = Cancha.objects.get(slug=self.kwargs['slug'])
-        #enviaos contexto
-        context['cancha'] = cancha
-        context['canchas'] = Cancha.objects.relations_canchas(cancha)
         #actualizamos el numero de visitas de la cancha
         cancha.vists = cancha.vists + 1
         cancha.save()
+        #enviaos contexto
+        context['cancha'] = cancha
+        context['canchas'] = Cancha.objects.relations_canchas(cancha)
         return context
 
     def form_valid(self, form):

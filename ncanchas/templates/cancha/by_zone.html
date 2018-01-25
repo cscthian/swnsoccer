@@ -1,0 +1,97 @@
+{% extends "cancha/base_cancha.html" %}
+
+{% load staticfiles %}
+
+{% block title %} {{home.title}} {% endblock %}
+
+{% block description %} {{home.description}} {% endblock description %}
+
+{% block content %}
+  {% include "include/header.html" %}
+
+  <!-- inicio de buscador -->
+      <div class="grid-container">
+        <h1 class="title-text">Canchas por {{zona.name}} :</h1>
+        <!-- inicio de bloque filtros -->
+        <div class="buscador-filter">
+          <a href="#" class="buscador-filter__item">
+            <p class="buscador-filter__item__namef1">Todos</p>
+          </a>
+          <a href="#" class="buscador-filter__item">
+            <p class="buscador-filter__item__namef2">Con Techo</p>
+          </a>
+          <a href="#" class="buscador-filter__item">
+            <p class="buscador-filter__item__namef3">Sin Techo</p>
+          </a>
+        </div>
+        <!-- fin de bloque filtros -->
+
+        <!-- inicio de bloque resultados -->
+        <div class="grid-x grid-margin-x cardcancha">
+          {% for c in canchas %}
+          <!-- inicio de card canchas -->
+          <div class="cell small-12 medium-6 large-4 card-cancha">
+            <div class="card-cancha__card">
+              <img src="{{c.image.url}}" alt="c.name" class="card-cancha__card__img">
+              {% if c.techo == True %}
+                  <p class="card-cancha__card__caracteristica-ct"> con techo </p>
+              {% else %}
+                  <p class="card-cancha__card__caracteristica-st"> sin techo </p>
+              {% endif %}
+            </div>
+            <div class="card-cancha__copy">
+              <h3 class="card-cancha__copy__title">{{c.name}}</h3>
+              <div class="card-cancha__copy__info">
+                <i class="fa fa-sun-o card-cancha__copy__info__icon" aria-hidden="true"></i>
+                <p class="card-cancha__copy__info__name"> S/. {{c.price_dia}}</p>
+              </div>
+              <div class="card-cancha__copy__info">
+                <i class="fa fa-moon-o card-cancha__copy__info__icon" aria-hidden="true"></i>
+                <p class="card-cancha__copy__info__name"> S/. {{c.price_noche}}</p>
+              </div>
+              <div class="card-cancha__copy__more">
+                 <a href="{% url 'cancha_app:cancha_detalle' c.slug %}" class=" button radius card-cancha__copy__more__btn ">Ver más</a>
+                 <div class="card-cancha__copy__info">
+                  <i class="fa fa-map-marker card-cancha__copy__info__icon" aria-hidden="true"></i>
+                  <p class="card-cancha__copy__info__name">{{c.addresse}}</p>
+                 </div>
+              </div>
+              <div class="card-cancha__copy__info">
+                <i class="fa fa-phone card-cancha__copy__info__icon" aria-hidden="true "></i>
+                <p class="card-cancha__copy__info__name">{{c.phone}}</p>
+              </div>
+
+              <div class="card-cancha__copy__services">
+
+                {%  if  c.sudaderas %}
+                  <div class="card-cancha__copy__services__ser">
+                    <i class="fa fa-html5 card-cancha__copy__services__ser__icon" aria-hidden="true"></i>
+                    <p class="card-cancha__copy__services__ser__name"> sudaderas</p>
+                  </div>
+                {% endif %}
+
+                <div class="card-cancha__copy__services__ser">
+                  <i class="fa fa-users card-cancha__copy__services__ser__icon" aria-hidden="true"></i>
+                  <p class="card-cancha__copy__services__ser__name"> {{c.number_player}} VS {{c.number_player}}</p>
+                </div>
+
+                {%  if  c.parking %}
+                  <div class="card-cancha__copy__services__ser">
+                    <i class="fa fa-car card-cancha__copy__services__ser__icon" aria-hidden="true"></i>
+                    <p class="card-cancha__copy__services__ser__name"> parking</p>
+                  </div>
+                {% endif %}
+
+              </div>
+            </div>
+          </div>
+          <!-- fin de card canchas -->
+          {% endfor %}
+        </div>
+        <!-- fin de bloque resultados -->
+      </div>
+      <!-- fin de buscador -->
+
+  {% include "include/footer.html" %}
+
+{% endblock content %}

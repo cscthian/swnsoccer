@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import Count
+from django.db.models import Count, Max
 from django.contrib.postgres.search import TrigramSimilarity
 
 class CanchaManager(models.Manager):
@@ -14,7 +14,7 @@ class CanchaManager(models.Manager):
             consulta1 = self.filter(
                 state = True,
                 name__trigram_similar=name,
-            ).order_by('-points')
+            ).order_by('-vists')
             #filtramos por zona
             consulta2 = self.filter(
                 state = True,
@@ -46,18 +46,46 @@ class CanchaManager(models.Manager):
             zone__in=zones,
         ).distinct()[:6]
 
-    def lista_distritos(self):
-        """ agrupa distritos de las zonas """
+    def agrupar_distrito_cancha(self, distrito):
+        """ devuelve un distrito con total de canchas y con cancha mas visitada"""
 
         consulta = self.filter(
-            state = True,
-        ).values(
-            'zone__distrito__slug',
-            'zone__distrito__name'
-        ).annotate(
-            Count('name')
+            state=True,
+            zone__distrito__pk=distrito.pk
         )
-        return consulta
+
+        #cancha mas visitada
+        cancha_max = consulta.annotate(
+            Max('vists')
+        )
+
+        print('cancha_max', cancha_max)
+
+        if consulta.count() > 0:
+            resultado = {
+                'slug': distrito.slug,
+                'name': distrito.name,
+                'count': consulta.count(),
+                'image': cancha_max[0].image
+            }
+        else:
+            resultado = {
+                'slug': distrito.slug,
+                'name': distrito.name,
+                'count': 0,
+                'image': None
+            }
+        return resultado
+
+    def filter_cancha_by_zone(self, zona):
+        return self.filter(
+            state=True,
+            zone__slug=zona,
+        ).order_by(
+            '-vists'
+        ).order_by(
+            'name'
+        )
 
     def search_structure_for_cancha(self, num):
         #buscar por structurure

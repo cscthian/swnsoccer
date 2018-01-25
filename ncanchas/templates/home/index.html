@@ -16,11 +16,13 @@
         <div class="banner__copy">
           <h1 class="banner__copy__title"> {{home.banner_title}}
           </h1>
-          <form class="banner__copy__form" method="get" action="#">{% csrf_token %}
-            {{form.kword}}
-            <button type="submit" class="banner__copy__form__btn"> <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </form>
+						<form class="banner__copy__form" method="get">{% csrf_token %}
+	            {{form.kword}}
+	            <button type="submit" class="banner__copy__form__btn">
+								<i class="fa fa-search" aria-hidden="true"></i>
+	            </button>
+	          </form>
+
           <p class="banner__copy__info"> Esta semana tenemos registradas <a href="#" class="banner__copy__info__number"> {{home.num_new_canchas}}</a> nuevas canchas, qué esperas tú? </p>
           <a href="#" class="banner__copy__action"> {{home.banner_action}}</a>
         </div>

@@ -2,6 +2,8 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.db.models.signals import post_save, m2m_changed
+from django.dispatch import receiver
 from django.utils.encoding import python_2_unicode_compatible
 from django.template.defaultfilters import slugify
 from django.conf import settings
@@ -14,6 +16,7 @@ from applications.zona.models import Zone
 
 #managers for cancha
 from .managers import CanchaManager
+
 
 @python_2_unicode_compatible
 class Cancha(TimeStampedModel):
@@ -37,7 +40,7 @@ class Cancha(TimeStampedModel):
     sshh = models.BooleanField('Cuenta con SS.HH.', default=False)
     web_url = models.URLField('URL pagina web o Fane Page', blank=True)
     points = models.DecimalField(max_digits=10, decimal_places=3, default=0, editable=False)
-    vists = models.IntegerField(default=0, editable=False)
+    vists = models.IntegerField(default=0)
     state = models.BooleanField('Activado', default=False)
     anulate = models.BooleanField('Eliminado', default=False)
     zone = models.ManyToManyField(Zone)
@@ -96,3 +99,22 @@ class Comentarys(TimeStampedModel):
 
     def __str__(self):
         return self.comentary
+
+#
+
+def update_data_zona(sender, instance, action, *args, **kwargs):
+    if action == 'post_add' or action == 'post_remove' or action == 'post_clear':
+        # direccionamos la imgen como imagen de zona
+        zonas = instance.zone.all()
+        for z in zonas:
+            # para cada zona asignamos imagen
+            canchas = Cancha.objects.filter(
+                state=True,
+                zone__pk=z.pk
+            ).order_by('-vists')
+            #actualizamos la imagen de zona y cantidad
+            z.image = canchas[0].image.url
+            z.count = canchas.count()
+            z.save()
+
+m2m_changed.connect(update_data_zona, sender=Cancha.zone.through)

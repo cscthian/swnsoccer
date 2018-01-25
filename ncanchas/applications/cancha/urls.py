@@ -10,6 +10,11 @@ urlpatterns = [
         views.SearchCanchaView.as_view(),
         name='cancha_search'
     ),
+    #url para detalle cancha
+    url(r'^canchas-en-cusco-peru-en/(?P<slug>[-\w]+)/$',
+        views.ZoneFilterCanchaView.as_view(),
+        name='filter_by_zone'
+    ),
 	#url para detalle cancha
     url(r'^detalle/(?P<slug>[-\w]+)/$',
         views.CanchaDetailView.as_view(),

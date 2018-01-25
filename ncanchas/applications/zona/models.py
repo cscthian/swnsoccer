@@ -53,6 +53,8 @@ class Zone(TimeStampedModel):
 
     distrito = models.ForeignKey(Distrito, verbose_name='Distrito', on_delete=models.CASCADE,)
     name = models.CharField('Nombre', max_length=130)
+    image = models.URLField('imagen de zona', blank=True)
+    count = models.IntegerField(default=0)
     slug = models.SlugField(editable=False, max_length=200)
 
     objects = ZoneManager()

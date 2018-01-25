@@ -28,9 +28,8 @@ class HomeView(TemplateView):
         #contexto principal
         #recuperamos pagina principal de la bd
         context['home'] = Home.objects.all()[0]
-        context['canchas'] = Cancha.objects.filter(
-        	state = True,
-        )
+        context['form'] = KwordForm
+        context['canchas'] = Cancha.objects.search_cancha('')
         return context
 
 

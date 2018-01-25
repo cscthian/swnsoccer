@@ -13,14 +13,18 @@ from django.views.generic import (
 )
 
 from .models import Distrito, Zone
+from .functions import agrupar_distrito_cancha
 
 
 class DistritoListView(ListView):
     """ vista que lita los distritos rgistrados """
 
     context_object_name = 'distritos'
-    model = Distrito
     template_name = 'zona/distritos.html'
+
+    def get_queryset(self):
+        #recuperamos pk por url
+        return agrupar_distrito_cancha()
 
 
 class ZoneByDistritoView(ListView):

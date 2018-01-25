@@ -174,7 +174,7 @@
 							{% for c in canchas  %}
 								<div class="cell small-12  card-cancha dc">
 									<div class="card-cancha__card dc-card">
-										<a href="#">
+										<a href="{% url 'cancha_app:cancha_detalle' c.slug %}">
 											<img src="{{c.image.url}}" alt="{{c.name}}" class="card-cancha__card__img">
 										</a>
 										{% if c.techo %}
@@ -184,7 +184,7 @@
 										{% endif %}
 									</div>
 									<div class="card-cancha__copy ">
-										<a href="#" class="card-cancha__copy__nombre">{{c.name}}</a>
+										<a href="{% url 'cancha_app:cancha_detalle' c.slug %}" class="card-cancha__copy__nombre">{{c.name}}</a>
 									</div>
 								</div>
 							{% endfor %}

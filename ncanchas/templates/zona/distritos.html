@@ -28,8 +28,12 @@
               <div class="cell small-4 medium-3 large-3 categories-results__item">
                 <a href="{% url 'zone_app:zona_by_distrito' d.slug %}" class="categories-results__item__a">
                   <div class="canchas-zona">
-                    <img src="{{d.image.url}}" alt="d.name" class="categories-results__item__a__img">
-                    <span class="banner__copy__info__number count-canchas">10</span>
+                    {% if d.image == None %}
+                      <img src="{% static 'img/2.jpg' %}" alt="{{d.name}}" class="categories-results__item__a__img">
+                    {% else %}
+                      <img src="{{d.image.url}}" alt="{{d.name}}" class="categories-results__item__a__img">
+                    {% endif %}
+                    <span class="banner__copy__info__number count-canchas"> +{{d.count}}</span>
                   </div>
                   <p class="categories-results__item__a__name">{{d.name}}</p>
                 </a>

@@ -20,6 +20,7 @@ class CanchaAdmin(admin.ModelAdmin):
         'price_noche',
         'techo',
         'parking',
+        'vists',
     )
     #
     filter_horizontal = ('zone',)

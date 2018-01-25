@@ -24,7 +24,7 @@
         <div class="main-header">
           <div class="main-header__head">
             <a href="/" class="main-header__head__logo">aPelotear <i class="fa fa-futbol-o main-header__head__logo__icon" aria-hidden="true"> </i></a>
-            <form action="buscador_submit" method="get" accept-charset="utf-8">
+            <form action="buscador_submit" method="get">
               <a href="{% url 'cancha_app:cancha_search' %}" class="main-header__head__search">
                 <button type="submit" class="main-header__head__search__btn"> <i class="fa fa-search "aria-hidden="true"></i> </button>
                 <input type="text" class="main-header__head__search__input" placeholder="Busca tu cancha en aPelotear">
@@ -33,9 +33,10 @@
           </div>
           <div class="controls">
             <a href="/" class="controls__control">Inicio</a>
-            <a href="#" class="controls__control">Zona </a>
-            <a href="#" class="controls__control">Registrate!</a>
-            <a href="#" class="controls__control">Museo</a>
+						<a href="#" class="controls__control">Zona</a>
+            <a href="{% url 'zone_app:lista_distritos' %}" class="controls__control">Distritos</a>
+						<a href="#" class="controls__control">Museo</a>
+            <a href="#" class="controls__control">Entrar</a>
           </div>
         </div>
 

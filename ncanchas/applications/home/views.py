@@ -33,6 +33,5 @@ class HomeView(TemplateView):
         return context
 
 
-
 class PlantillaView(TemplateView):
-    template_name = 'plantilla/categories.html'
+    template_name = 'plantilla/menssagge.html'

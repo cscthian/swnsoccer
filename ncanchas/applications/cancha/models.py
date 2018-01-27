@@ -43,11 +43,16 @@ class Cancha(TimeStampedModel):
     vists = models.IntegerField(default=0)
     state = models.BooleanField('Activado', default=False)
     anulate = models.BooleanField('Eliminado', default=False)
-    zone = models.ManyToManyField(Zone)
+    zone = models.ManyToManyField(
+        Zone,
+        blank=True,
+    )
     user_created = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         related_name="usuario_cancha",
         on_delete=models.CASCADE,
+        blank=True,
+        null=True
     )
     slug = models.SlugField(editable=False, max_length=200)
 

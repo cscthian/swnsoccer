@@ -18,6 +18,7 @@ class CanchaAdmin(admin.ModelAdmin):
         'phone',
         'price_dia',
         'price_noche',
+        'state',
         'techo',
         'parking',
         'vists',
@@ -25,7 +26,7 @@ class CanchaAdmin(admin.ModelAdmin):
     #
     filter_horizontal = ('zone',)
     search_fields = ('name',)
-    list_filter = ('techo','parking','zone',)
+    list_filter = ('state','techo','parking','zone',)
 
 
 class ComentarysAdmin(admin.ModelAdmin):

@@ -34,6 +34,7 @@ class Home(TimeStampedModel):
     banner_title = models.CharField('Titulo banner', max_length=200)
     banner_img = models.ImageField('imagen portada', upload_to='home')
     banner_action = models.CharField('boton primario', max_length=200)
+    action_url = models.URLField('url para boton primario',blank=True)
     num_new_canchas = models.IntegerField(default=1)
     phone_uno = models.CharField('Telefono 1', max_length=15, blank=True)
     phone_dos = models.CharField('Telefono 2', max_length=15, blank=True)

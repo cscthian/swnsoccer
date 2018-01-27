@@ -1,0 +1,32 @@
+.form-item {
+  position: relative;
+  font-family: $font-text;
+  width: 100%;
+  &__label {
+    color: color(gris1);
+  }
+  &__input {
+    background: color(border-card);
+    border-radius: 10px;
+    padding-left: 2em;
+  }
+  &__icon {
+    position: absolute;
+    color: color(plomo);
+    top: 2.25em;
+    left: 0.6em;
+  }
+}
+
+.form-item-check {
+  display: flex;
+  align-items: center;
+  &__label {
+    margin: 0px;
+    font-family: $font-text;
+  }
+  &__input {
+    margin: 0px;
+    margin-left: 5px;
+  }
+}

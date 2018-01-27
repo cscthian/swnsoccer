@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 #django library
 from django.urls import reverse_lazy, reverse
+from django.http import HttpResponseRedirect
 from django.views.generic import (
     CreateView,
     UpdateView,
@@ -18,7 +19,11 @@ from applications.zona.models import Zone
 
 #local app
 from .models import Cancha
-from .forms import SearchForm, ComentarysForm
+from .forms import (
+    SearchForm,
+    ComentarysForm,
+    CanchaForm
+)
 
 
 class SearchCanchaView(ListView):
@@ -77,3 +82,43 @@ class CanchaDetailView(FormView):
     def form_valid(self, form):
         print('codigo pendiente')
         return super(CanchaDetailView, self).form_valid(form)
+
+
+class CanchaCreateView(CreateView):
+    """
+        vista que registra canchas nuevas
+    """
+    model = Cancha
+    form_class = CanchaForm
+    success_url = '.'
+    template_name = 'cancha/register.html'
+
+    def form_valid(self, form):
+        cancha = form.save()
+        #si existe usuario registramos usuario
+        if self.request.user.is_authenticated:
+            cancha.user_created = self.request.user
+            cancha.save()
+
+        #completado el registro mandamos a mensaje de con
+        return HttpResponseRedirect(
+                    reverse(
+                        'cancha_app:cancha_confimacion',
+                        kwargs={'slug': cancha.slug },
+                    )
+                )
+
+
+class MessaggeView(TemplateView):
+    """
+        vista que muestra mensaje de confirmacion a cancha registrada
+    """
+    template_name = 'cancha/menssagge.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(MessaggeView, self).get_context_data(**kwargs)
+        #recuperamos la cancha
+        cancha = Cancha.objects.get(slug=self.kwargs['slug'])
+        #enviaos contexto
+        context['cancha'] = cancha
+        return context

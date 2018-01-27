@@ -1,0 +1,200 @@
+.btn-primary {
+  background: color(uno);
+  color: color(blanco);
+  margin: 1em;
+  padding: {
+    top: 0.6em;
+    bottom: 0.6em;
+    left: 2.5em;
+    right: 2.5em;
+  };
+  border-radius: 20px;
+  &:hover {
+    background: color(dos);
+    color: color(blanco);
+    cursor: pointer;
+  }
+}
+
+.btn-secondary {
+  background: color(dos);
+  color: color(blanco);
+  margin: 1em;
+  padding: {
+    top: 0.6em;
+    bottom: 0.6em;
+    left: 2.5em;
+    right: 2.5em;
+  };
+  border-radius: 20px;
+  &:hover {
+    background: color(uno);
+    color: color(blanco);
+    cursor: pointer;
+  }
+}
+
+.btn-thirty {
+  background: color(tres);
+  color: color(blanco);
+  margin: 1em;
+  padding: {
+    top: 0.6em;
+    bottom: 0.6em;
+    left: 2.5em;
+    right: 2.5em;
+  };
+  border-radius: 20px;
+  &:hover {
+    background: color(uno);
+    color: color(blanco);
+    cursor: pointer;
+  }
+}
+
+.btn-fourth {
+  background: color(tres);
+  color: color(blanco);
+  margin: 1em;
+  padding: {
+    top: 0.6em;
+    bottom: 0.6em;
+    left: 2.5em;
+    right: 2.5em;
+  };
+  border-radius: 20px;
+  &:hover {
+    background: color(cuatro);
+    color: color(blanco);
+    cursor: pointer;
+  }
+}
+
+.btn-fifth {
+  background: color(cuatro);
+  color: color(blanco);
+  margin: 1em;
+  padding: {
+    top: 0.6em;
+    bottom: 0.6em;
+    left: 2.5em;
+    right: 2.5em;
+  };
+  border-radius: 20px;
+  &:hover {
+    background: color(tres);
+    color: color(blanco);
+    cursor: pointer;
+  }
+}
+
+.btn-2-primary {
+  background: color(uno);
+  color: color(blanco);
+  margin: 1em;
+  padding: {
+    top: 0.6em;
+    bottom: 0.6em;
+    left: 6em;
+    right: 6em;
+  };
+  border-radius: 5px;
+  &:hover {
+    background: color(tres);
+    color: color(blanco);
+    cursor: pointer;
+  }
+}
+
+.btn-2-secondary {
+  background: color(dos);
+  color: color(blanco);
+  margin: 1em;
+  padding: {
+    top: 0.6em;
+    bottom: 0.6em;
+    left: 6em;
+    right: 6em;
+  };
+  border-radius: 5px;
+  &:hover {
+    background: color(tres);
+    color: color(blanco);
+    cursor: pointer;
+  }
+}
+
+.btn-2-thirty {
+  background: color(cuatro);
+  color: color(blanco);
+  margin: 1em;
+  padding: {
+    top: 0.6em;
+    bottom: 0.6em;
+    left: 6em;
+    right: 6em;
+  };
+  border-radius: 5px;
+  &:hover {
+    background: color(cinco);
+    color: color(blanco);
+    cursor: pointer;
+  }
+}
+
+.btn-large {
+  padding: {
+    top: 0.6em;
+    bottom: 0.6em;
+  };
+  width: 100%;
+  margin: 0px;
+}
+
+.btn-group-primary {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__btn1 {
+    background: color(uno);
+    color: color(blanco);
+    margin: 0.5em;
+    padding: {
+      top: 0.6em;
+      bottom: 0.6em;
+      left: 10%;
+      right: 10%;
+    };
+    border-radius: 15px;
+    &:hover {
+      cursor: pointer;
+      background: color(dos);
+      color: color(blanco);
+    }
+  }
+}
+
+.btn-group-primary {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__btn2 {
+    background: color(gris);
+    color: color(blanco);
+    margin: 0.5em;
+    padding: {
+      top: 0.6em;
+      bottom: 0.6em;
+      left: 10%;
+      right: 10%;
+    };
+    border-radius: 15px;
+    &:hover {
+      cursor: pointer;
+      background: color(negro-suave);
+      color: color(blanco);
+    }
+  }
+}

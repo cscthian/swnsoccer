@@ -20,4 +20,14 @@ urlpatterns = [
         views.CanchaDetailView.as_view(),
         name='cancha_detalle'
     ),
+    #url para pantalla de inicio
+    url(r'^registrar-cancha-en-cusco/nuevo/$',
+        views.CanchaCreateView.as_view(),
+        name='cancha_add'
+    ),
+    #url para confirmacion de cancha registrada
+    url(r'^confirmacion-cancha/(?P<slug>[-\w]+)/$',
+        views.MessaggeView.as_view(),
+        name='cancha_confimacion'
+    ),
 ]

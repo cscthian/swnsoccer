@@ -84,3 +84,5 @@ class Zone(TimeStampedModel):
 
         self.slug = slugify(slug_unique)
         super(Zone, self).save(*args, **kwargs)
+
+

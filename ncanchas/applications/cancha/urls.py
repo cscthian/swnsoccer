@@ -30,4 +30,10 @@ urlpatterns = [
         views.MessaggeView.as_view(),
         name='cancha_confimacion'
     ),
+    #rul para estructura de una cancah
+    url(r'^estructura-cancha/(?P<structure>[-\w]+)/$',
+        views.FindStructureView.as_view(),
+        name='cancha_structure'
+    ),
 ]
+

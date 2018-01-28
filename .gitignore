@@ -71,13 +71,11 @@ design/gulpfile.js
 design/*
 #Secrect json
 
-#ncancha/manage.py
+ncanchas/manage.py
 
-#ncanchas/secrets.json
+ncanchas/secrets.json
 
-#ncanchas/ncanchas/settings.py
-
-#ncanchas/ncancha/wsgi.py
+ncanchas/ncanchas/wsgi.py
 
 ncanchas/media/*
 

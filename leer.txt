@@ -6,7 +6,10 @@ sudo apt-get install postgresql-contrib
 #activate triagrmasimility:
 CREATE EXTENSION pg_trgm;
 
-
+CREATE INDEX cancha_name_idx ON cancha_cancha USING GIN(name gin_trgm_ops);
+CREATE INDEX cancha_addresse_idx ON cancha_cancha USING GIN(addresse gin_trgm_ops);
+CREATE INDEX zone_name_idx ON zona_zone USING GIN(name gin_trgm_ops);
+CREATE INDEX distrito_name_idx ON zona_distrito USING GIN(name gin_trgm_ops);
 #nuevo servidor
 #segundo cambio comi
 

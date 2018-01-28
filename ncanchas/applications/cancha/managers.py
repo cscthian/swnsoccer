@@ -11,9 +11,14 @@ class CanchaManager(models.Manager):
         #verificamos si nombre tiene mas de 3 digitos
         if len(name) > 3:
             #filtramos por nombre
-            consulta1 = self.filter(
+            consulta = self.filter(
                 state = True,
                 name__trigram_similar=name,
+            ).order_by('-vists')
+            #por direccion
+            consulta1 = self.filter(
+                state = True,
+                addresse__trigram_similar=name,
             ).order_by('-vists')
             #filtramos por zona
             consulta2 = self.filter(
@@ -26,9 +31,9 @@ class CanchaManager(models.Manager):
                 zone__distrito__name__trigram_similar=name,
             ).order_by('-vists')
 
-            resultado = consulta1 | consulta2 | consulta3
+            resultado = consulta | consulta1 | consulta2 | consulta3
 
-            return resultado
+            return resultado.distinct()
         else:
             return self.filter(
                 state = True,

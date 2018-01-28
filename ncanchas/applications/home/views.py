@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 #django library
 from django.urls import reverse_lazy, reverse
+from django.http import HttpResponseRedirect
 from django.views.generic import (
     CreateView,
     UpdateView,
@@ -22,6 +23,17 @@ from .forms import KwordForm
 
 class HomeView(TemplateView):
     template_name = 'home/index.html'
+
+    def get(self, request, *args, **kwargs):
+        #si tenemos in kword mandamos a busqeuda
+        if len(self.request.GET) > 0:
+            print('en el otro get', self.request.GET.get('csrfmiddlewaretoken'))
+            url1 = 'cancha-de-gras/?csrfmiddlewaretoken='
+            url2 = str(self.request.GET.get('csrfmiddlewaretoken'))+'&kword='+self.request.GET.get('kword')
+            return HttpResponseRedirect(url1+url2)
+        else:
+            context = self.get_context_data(**kwargs)
+            return self.render_to_response(context)
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)

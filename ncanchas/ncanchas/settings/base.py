@@ -33,11 +33,14 @@ LOCAL_APPS = (
     'applications.zona',
     'applications.cancha',
     'applications.reserva',
+    'applications.museo',
 )
 
 THIRD_PARTY_APPS = (
     'sorl.thumbnail',
     'rest_framework',
+    'ckeditor',
+    'ckeditor_uploader',
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS

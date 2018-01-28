@@ -86,6 +86,7 @@ ncanchas/applications/cancha/migrations/*
 ncanchas/applications/reserva/migrations/*
 ncanchas/applications/users/migrations/*
 ncanchas/applications/zona/migrations/*
+ncanchas/applications/museo/migrations/*
 
 
 *migrations/*

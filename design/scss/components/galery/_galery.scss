@@ -1,0 +1,23 @@
+.galery {
+  margin: 1em;
+  &__img {
+    margin: 0px;
+    width: 100%;
+    height: 370px;
+    &:hover {
+      filter: sepia(60%)
+    }
+  }
+  &__imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__item {
+      width: 50%;
+      height: 200px;
+      &:hover {
+        filter: saturate(180%);
+      }
+    }
+  }
+}

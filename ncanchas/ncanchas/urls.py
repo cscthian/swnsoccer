@@ -11,4 +11,9 @@ urlpatterns = [
     url(r'^', include('applications.cancha.urls')),
     #urls para zona
     url(r'^', include('applications.zona.urls')),
+    #urls para museo
+    url(r'^', include('applications.museo.urls')),
+
+    #url para editor de texto
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

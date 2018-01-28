@@ -22,3 +22,11 @@ class ZoneManager(models.Manager):
         )
 
         return consulta
+
+    def max_zone_visit(self):
+        #zonas mas visitadas
+        return self.filter(
+            consulta = self.filter(
+
+            )
+        )

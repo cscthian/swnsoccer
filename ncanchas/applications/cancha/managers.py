@@ -92,69 +92,40 @@ class CanchaManager(models.Manager):
             'name'
         )
 
-    def search_structure_for_cancha(self, num):
+    def search_structure_for_cancha(self, var):
         #buscar por structurure
-            if num=='0':
+            if var == 'con-techo':
                 #con techo
                 return self.filter(
                     techo=True,
-                    state=False,
+                    state=True,
                     anulate=False,
                 ).order_by('name')[:20]
 
-            elif num=='1':
+            elif var == 'sin-techo':
                  #sin techo
                return self.filter(
                     techo=False,
-                    state=False,
+                    state=True,
                     anulate=False
                 ).order_by('name')[:20]
 
-            elif num=='2':
+            elif var == 'con-parking':
                 #con parking
                return self.filter(
                     parking=True,
-                    state=False,
+                    state=True,
                     anulate=False
                 ).order_by('name')[:20]
 
-            elif num=='3':
-                #t odo
+            elif var == 'todo':
+                #todo
                 return self.filter(
-                    state=False,
+                    state=True,
                     anulate=False
                 ).order_by('name')[:20]
+            else:
+                print('no encontrado')
 
 
-    def search_structure_for_cancha_distrito(self, num, distrito):
-        #buscar por structurure
-            if num=='0':
-                #con techo
-                return self.filter(
-                    techo=True,
-                    state=False,
-                    anulate=False,
-                ).order_by('name')[:20]
 
-            elif num=='1':
-                 #sin techo
-               return self.filter(
-                    techo=False,
-                    state=False,
-                    anulate=False
-                ).order_by('name')[:20]
-
-            elif num=='2':
-                #con parking
-               return self.filter(
-                    parking=True,
-                    state=False,
-                    anulate=False
-                ).order_by('name')[:20]
-
-            elif num=='3':
-                #t odo
-                return self.filter(
-                    state=False,
-                    anulate=False
-                ).order_by('name')[:20]

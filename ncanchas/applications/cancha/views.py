@@ -122,3 +122,21 @@ class MessaggeView(TemplateView):
         #enviaos contexto
         context['cancha'] = cancha
         return context
+
+
+class FindStructureView(TemplateView):
+    """
+        vista que busque canchas por estructura
+    """
+
+    template_name = 'cancha/filterstructure.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(FindStructureView, self).get_context_data(**kwargs)
+        structure = self.kwargs['structure']
+        structure = structure.lower()
+        cancha = Cancha.objects.search_structure_for_cancha(structure)
+        context['structure'] = cancha
+        return context
+
+

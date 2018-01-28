@@ -27,6 +27,6 @@ class ZoneManager(models.Manager):
         #zonas mas visitadas
         return self.filter(
             consulta = self.filter(
-                
+
             )
         )

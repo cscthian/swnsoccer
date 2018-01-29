@@ -23,6 +23,10 @@ class ZoneManager(models.Manager):
 
         return consulta
 
+    def zonas_mas_populares(self):
+        """ lista zonas mas populares """
+        return self.all().order_by('name').order_by('-count')
+
     def max_zone_visit(self):
         #zonas mas visitadas
         return self.filter(

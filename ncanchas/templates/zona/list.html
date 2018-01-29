@@ -2,9 +2,9 @@
 
 {% load staticfiles %}
 
-{% block title %} {{home.title}} {% endblock %}
+{% block title %} Campos deportivos en Cusco {% endblock %}
 
-{% block description %} {{home.description}} {% endblock description %}
+{% block description %} Encuentra campos deportivos en cusco, en la zonas que mas te guste. {% endblock description %}
 
 {% block content %}
   {% include "include/header.html" %}
@@ -12,7 +12,7 @@
   <!-- inicio de categorias -->
       <div class="grid-container ">
           <h1 class="secondary-title">
-            Zonas con canchas para el distrito {{distrito.name}}
+            Elige la zona que más te convenga:
           </h1>
           <form method="get">{% csrf_token %}
             <div class="buscador-search categories-search">

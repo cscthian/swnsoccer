@@ -68,7 +68,7 @@ design/node_modules/*
 design/scss/font-awesome/*
 design/scss/_config.scss
 design/gulpfile.js
-design/*
+#design/*
 #Secrect json
 
 ncanchas/manage.py

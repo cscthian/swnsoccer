@@ -14,7 +14,7 @@
   <!-- inicio de detalle-cancha-->
       <div class="grid-container">
         <div class="grid-x grid-margin-x">
-          <div class="small-12 large-9 detalle-cancha__1">
+          <div class="small-12 large-8 detalle-cancha__1">
             <!-- inicio del baner principal -->
             <div class="cancha-info">
               <img src="{{cancha.image.url}}" alt="{{cancha.name}}" class="cancha-info__img">
@@ -74,9 +74,14 @@
 
   							{% if cancha.techo == True %}
   								<div class="cancha-services__item">
-  									<i class="fa fa-circle  cancha-services__icon" aria-hidden="true"></i>
+  									<i class="fa fa-circle  cancha-services__icon ser-active" aria-hidden="true"></i>
   									<p class="cancha-services__item__name"> Techo</p>
   								</div>
+                {% else %}
+                  <div class="cancha-services__item">
+                    <i class="fa fa-circle  cancha-services__icon" aria-hidden="true"></i>
+                    <p class="cancha-services__item__name"> Techo</p>
+                  </div>
   							{% endif %}
 
   							{% if cancha.sudaderas == True %}
@@ -84,6 +89,11 @@
   									<i class="fa fa-circle  cancha-services__icon ser-active" aria-hidden="true"></i>
   									<p class="cancha-services__item__name"> Sudaderas</p>
   								</div>
+                {% else %}
+                  <div class="cancha-services__item">
+                    <i class="fa fa-circle  cancha-services__icon" aria-hidden="true"></i>
+                    <p class="cancha-services__item__name"> Sudaderas</p>
+                  </div>
   							{% endif %}
 
   							{% if cancha.parking == True %}
@@ -91,13 +101,23 @@
   									<i class="fa fa-circle  cancha-services__icon ser-active" aria-hidden="true"></i>
   									<p class="cancha-services__item__name"> Parking</p>
   								</div>
+                {% else %}
+                  <div class="cancha-services__item">
+                    <i class="fa fa-circle  cancha-services__icon" aria-hidden="true"></i>
+                    <p class="cancha-services__item__name"> Parking</p>
+                  </div>
   							{% endif %}
 
   							{% if cancha.cafetin == True %}
   								<div class="cancha-services__item">
-  									<i class="fa fa-circle  cancha-services__icon" aria-hidden="true"></i>
+  									<i class="fa fa-circle  cancha-services__icon ser-active" aria-hidden="true"></i>
   									<p class="cancha-services__item__name"> Cafetin</p>
   								</div>
+                {% else %}
+                  <div class="cancha-services__item">
+                    <i class="fa fa-circle  cancha-services__icon" aria-hidden="true"></i>
+                    <p class="cancha-services__item__name"> Cafetin</p>
+                  </div>
   							{% endif %}
 
   							{% if cancha.sshh  %}
@@ -105,6 +125,11 @@
   									<i class="fa fa-circle cancha-services__icon ser-active" aria-hidden="true"></i>
   									<p class="cancha-services__item__name"> SS.HH</p>
   								</div>
+                {% else %}
+                  <div class="cancha-services__item">
+                    <i class="fa fa-circle cancha-services__icon" aria-hidden="true"></i>
+                    <p class="cancha-services__item__name"> SS.HH</p>
+                  </div>
   							{% endif %}
               </div>
             </div>
@@ -168,10 +193,10 @@
             -->
           </div>
 
-          <div class="small-12 large-3 grid-x cancha-filtro">
+          <div class="small-12 large-4 cancha-filtro">
             <h3 class="cell third-title">Canchas en esta zona:</h3>
-            {% for c in canchas %}
-              <div class="cell small-12">
+            <div class="grid-x grid-margin-x align-center">
+              {% for c in canchas %}
                 <div id="clickeable" onclick="location.href='{% url 'cancha_app:cancha_detalle' c.slug %}';" class="simple-card">
                   <div class="simple-card__header">
                     <img src="{{c.image.url}}" alt="{{c.name}}" class="simple-card__header__img">
@@ -186,8 +211,8 @@
                     <p class="simple-card__body__text">{{c.addresse}}</p>
                   </div>
                 </div>
-              </div>
-            {% endfor %}
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>

@@ -11,10 +11,10 @@
         </div>
         <div class="mov-controls">
           <a href="/" class="mov-controls__control"> <i class="fa fa-futbol-o mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__control"> <i class="fa fa-th-large mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__control"> <i class="fa fa-pencil mov-controls__control__icon" aria-hidden="true"></i> </a>
+          <a href="{% url 'zone_app:lista_zonas' %}" class="mov-controls__control"> <i class="fa fa-th-large mov-controls__control__icon" aria-hidden="true"></i> </a>
+          <a href="{% url 'cancha_app:cancha_add' %}" class="mov-controls__control"> <i class="fa fa-pencil mov-controls__control__icon" aria-hidden="true"></i> </a>
           <a href="#" class="mov-controls__control"> <i class="fa fa-user mov-controls__control__icon" aria-hidden="true"></i> </a>
-          <a href="#" class="mov-controls__nuevas-canchas"> 5 </a>
+          <a href="{% url 'cancha_app:cancha_search' %}" class="mov-controls__nuevas-canchas"> 5 </a>
         </div>
         <div class="space-header">
         </div>
@@ -33,7 +33,7 @@
           </div>
           <div class="controls">
             <a href="/" class="controls__control">Inicio</a>
-						<a href="#" class="controls__control">Zona</a>
+						<a href="{% url 'zone_app:lista_zonas' %}" class="controls__control">Zonas</a>
             <a href="{% url 'zone_app:lista_distritos' %}" class="controls__control">Distritos</a>
 						<a href="{% url 'museo_app:museo_index' %}" class="controls__control">Museo</a>
             <a href="#" class="controls__control">Entrar</a>

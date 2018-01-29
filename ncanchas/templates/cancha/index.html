@@ -20,18 +20,37 @@
 
         <!-- inicio de bloque filtros -->
         <div class="buscador-filter">
-          <a href="#" class="buscador-filter__item">
-            <p class="buscador-filter__item__namef1">Todos</p>
-          </a>
-          <a href="#" class="buscador-filter__item">
-            <p class="buscador-filter__item__namef2">Con Techo</p>
-          </a>
-          <a href="#" class="buscador-filter__item">
-            <p class="buscador-filter__item__namef3">Sin Techo</p>
-          </a>
+          {% if len_request > 0 %}
+            <a href="{{request.get_full_path}}&filtro=todos" class="buscador-filter__item">
+              <p class="buscador-filter__item__namef1">Todos</p>
+            </a>
+          {% else %}
+            <a href="?csrfmiddlewaretoken=g7cvYDePTfpNxcOohlF4kWR7RpTrs1ZOipASYSiP9YBMyqRkKewTpoDDAwWZiXUg&filtro=todos" class="buscador-filter__item">
+              <p class="buscador-filter__item__namef1">Todos</p>
+            </a>
+          {% endif %}
+
+          {% if len_request > 0 %}
+            <a href="{{request.get_full_path}}&filtro=parking" class="buscador-filter__item">
+              <p class="buscador-filter__item__namef2">Con Estacionamiento</p>
+            </a>
+          {% else %}
+            <a href="?csrfmiddlewaretoken=g7cvYDePTfpNxcOohlF4kWR7RpTrs1ZOipASYSiP9YBMyqRkKewTpoDDAwWZiXUg&filtro=parking" class="buscador-filter__item">
+              <p class="buscador-filter__item__namef1">Con Estacionamiento</p>
+            </a>
+          {% endif %}
+
+          {% if len_request > 0 %}
+            <a href="{{request.get_full_path}}&filtro=sinparking" class="buscador-filter__item">
+              <p class="buscador-filter__item__namef1">Sin Estacionamiento</p>
+            </a>
+          {% else %}
+            <a href="?csrfmiddlewaretoken=g7cvYDePTfpNxcOohlF4kWR7RpTrs1ZOipASYSiP9YBMyqRkKewTpoDDAwWZiXUg&filtro=sinparking" class="buscador-filter__item">
+              <p class="buscador-filter__item__namef1">Sin Estacionamiento</p>
+            </a>
+          {% endif %}
         </div>
         <!-- fin de bloque filtros -->
-
         <!-- inicio de bloque resultados -->
         <div class="grid-x grid-margin-x cardcancha">
           {% for c in canchas %}

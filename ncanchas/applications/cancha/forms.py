@@ -13,7 +13,8 @@ class SearchForm(forms.Form):
         widget=forms.TextInput(
             attrs={
                 'class':'buscador-search__input',
-                'placeholder': 'ingrese nombre, distrito o zona'
+                'placeholder': 'ingrese nombre, distrito o zona',
+                'autofocus':'True'
             }
         )
     )

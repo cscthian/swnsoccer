@@ -35,12 +35,18 @@ class SearchCanchaView(ListView):
     def get_context_data(self, **kwargs):
         context = super(SearchCanchaView, self).get_context_data(**kwargs)
         context['form'] = SearchForm
+        #contexto para realizar filtros
+        context['len_request'] = len(self.request.GET)
         return context
 
     def get_queryset(self):
         #recuperamos el valor por GET
         q = self.request.GET.get("kword", '')
-        queryset = Cancha.objects.search_cancha(q)
+        r = self.request.GET.get("filtro", '')
+        if r == 'todos':
+            r = ''
+        #
+        queryset = Cancha.objects.search_cancha(q, r)
         return queryset
 
 
@@ -138,5 +144,3 @@ class FindStructureView(TemplateView):
         cancha = Cancha.objects.search_structure_for_cancha(structure)
         context['structure'] = cancha
         return context
-
-

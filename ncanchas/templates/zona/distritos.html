@@ -14,9 +14,9 @@
           <h1 class="secondary-title">
             Encuentra canchas en tu Distrito {{suscription_form}}
           </h1>
-          <form action="buscador_submit" method="get" accept-charset="utf-8">
+          <form method="get">{% csrf_token %}
             <div class="buscador-search categories-search">
-              <input type="text" class="buscador-search__input" placeholder=" ingrese nombre, distrito o zona">
+              {{form.kword}}
               <button type="submit" class="buscador-search__btn"> <i class="fa fa-search "aria-hidden="true"></i> </button>
             </div>
           </form>

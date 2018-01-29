@@ -5,38 +5,49 @@ from django.contrib.postgres.search import TrigramSimilarity
 class CanchaManager(models.Manager):
     """procedimiento para cancha"""
 
-    def search_cancha(self, name):
+    def search_cancha(self, name, filtro):
         """funcion que busca canchas"""
+
+        # primero realizamos filtro
+        if (filtro != ''):
+            if filtro == 'parking':
+                filtrado = self.filter(
+                    state=True,
+                    parking=True,
+                )
+            else:
+                filtrado = self.filter(
+                    state=True,
+                    parking=False,
+                )
+        else:
+            filtrado = self.filter(
+                state=True,
+            )
 
         #verificamos si nombre tiene mas de 3 digitos
         if len(name) > 3:
             #filtramos por nombre
-            consulta = self.filter(
-                state = True,
+            consulta = filtrado.filter(
                 name__trigram_similar=name,
             ).order_by('-vists')
             #por direccion
-            consulta1 = self.filter(
-                state = True,
+            consulta1 = filtrado.filter(
                 addresse__trigram_similar=name,
             ).order_by('-vists')
             #filtramos por zona
-            consulta2 = self.filter(
-                state = True,
+            consulta2 = filtrado.filter(
                 zone__name__trigram_similar=name,
             ).order_by('-vists')
             #filtramos por distrito
-            consulta3 = self.filter(
-                state = True,
+            consulta3 = filtrado.filter(
                 zone__distrito__name__trigram_similar=name,
             ).order_by('-vists')
 
             resultado = consulta | consulta1 | consulta2 | consulta3
-
             return resultado.distinct()
         else:
-            return self.filter(
-                state = True,
+            return filtrado.filter(
                 name__icontains=name,
             ).order_by('-vists')[:30]
 
@@ -126,6 +137,3 @@ class CanchaManager(models.Manager):
                 ).order_by('name')[:20]
             else:
                 print('no encontrado')
-
-
-

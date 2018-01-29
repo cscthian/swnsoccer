@@ -11,6 +11,12 @@ urlpatterns = [
         views.DistritoListView.as_view(),
         name='lista_distritos'
     ),
+    #url para listar zonas populares
+    url(
+        r'^campos-deportivos-en-cusco-peru/$',
+        views.ZoneLitView.as_view(),
+        name='lista_zonas'
+    ),
 	#url para listar zonas por ditrito
     url(
         r'^cancha-de-gras-en-el-distrito/(?P<slug>[-\w]+)/$',
